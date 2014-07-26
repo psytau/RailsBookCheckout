@@ -14,6 +14,11 @@ gem 'coffee-rails', '~> 4.0.0'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
