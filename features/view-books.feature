@@ -7,4 +7,3 @@ Scenario: Access book titles and ratings in the library
   Then User can can see all the book titles
     And User can can see all the ratings
 
-
