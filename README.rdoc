@@ -27,6 +27,7 @@ Things you may want to cover:
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
+{<img src="https://travis-ci.org/psytau/RailsBookCheckout.svg" alt="Build Status" />}[https://travis-ci.org/psytau/RailsBookCheckout]
 
 {<img src="https://codeclimate.com/github/psytau/RailsBookCheckout/badges/gpa.svg" />}[https://codeclimate.com/github/psytau/RailsBookCheckout]
 {<img src="https://codeclimate.com/github/psytau/RailsBookCheckout/badges/coverage.svg" />}[https://codeclimate.com/github/psytau/RailsBookCheckout]
