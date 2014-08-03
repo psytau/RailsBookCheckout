@@ -1,4 +1,6 @@
 language: ruby
+script:
+  - bundle exec rspec spec
+  - bundle exec cucumber --no-profile --color --format progress
 rvm:
-  - "2.0.0"
   - "2.1.1"
