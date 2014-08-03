@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Sign up</h1>
+
+    <br />
+
+    <%= form_for @book do |f| %>
+
+        <div><%= f.label :author %>
+          <br/>
+          <%= f.email_field :author, autofocus: true %></div>
+
+        <div><%= f.label :title %>
+          <br/>
+          <%= f.text_field :title %></div>
+
+        <div><%= f.label :isbn%>
+          <br/>
+          <%= f.text_field :isbn %></div>
+
+        <div><%= f.label :status %>
+          <br/>
+          <%= f.text_field :status %></div>
+
+        <!-- TODO make rating use stars -->
+        <div><%= f.label :rating %>
+          <br/>
+          <%= f.text_field :rating %></div>
+
+        <!-- TODO add picture and make required -->
+        <br />
+        <div><%= f.submit "Create book" %></div>
+    <% end %>
+</div>
