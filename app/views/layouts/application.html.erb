@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">	
   <title>RailsBookCheckout</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<ul class="nav nav-pills nav-justified">
-  <li class="active"><a href="#">Home</a></li>
-  <li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      Books <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu" role="menu">
-      <li>
-        <a href="<%= books_url %>">Books List</a>
-      </li>
-      <li>
-        <a href="<%= new_book_url %>">Add Books</a>
-      </li>
-    </ul>
-  </li>
-  <% if user_signed_in? %>
-      <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
-      <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-  <% else %>
-      <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
-      <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
-  <% end %>
-</ul>
+
+<%= render :partial => 'layouts/header' %>
+
 <% if current_user %>
     Logged in as <strong><%= current_user.email %></strong>.
 
 <% end %>
+
+
+
 <%= yield %>
 
 	<p class="notice"><%= notice %></p>

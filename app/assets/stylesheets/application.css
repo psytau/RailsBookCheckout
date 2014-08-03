@@ -14,3 +14,9 @@
  *= require_self
  *= require bootstrap.min
  */
+
+
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
