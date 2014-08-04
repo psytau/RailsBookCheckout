@@ -1,17 +1,25 @@
 Given(/^TestUser is logged in$/) do
-  pending # express the regexp above with the code you wish you had
+  visit '/users/sign_in'
+  fill_in "user_email", :with => 'b@b.com'
+  fill_in "user_password", :with => '12345678'
+  click_button "Sign in"
 end
 
 When(/^TestUser visits the add book page$/) do
-  pending # express the regexp above with the code you wish you had
+  visit '/books/new'
 end
 
 When(/^TestUser adds a book$/) do
-  pending # express the regexp above with the code you wish you had
+  fill_in "Author", :with => 'Judy Bloom'
+  fill_in "Title", :with => 'Blubber'
+  fill_in "Isbn", :with => '123456789'
+  fill_in "Rating", :with => '4'
+  click_button "Create book"
 end
 
 Then(/^The book is added to the libarary database, but is not approved$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content 'Success'
+  expect(page).to have_content 'Unapproved'
 end
 
 Given(/^TestAdmin is logged in$/) do
