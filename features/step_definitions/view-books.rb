@@ -1,15 +1,17 @@
-Given(/^TestUser is logged in$/) do
+
+Given /^TestUser is logged in$/ do
+  email = 'testing@man.net'
+  password = 'secretpass'
+  User.new(:email => email, :password => password, :password_confirmation => password).save!
+
   visit '/users/sign_in'
-  fill_in "user_email", :with => 'b@b.com'
-  fill_in "user_password", :with => '12345678'
+  fill_in "user_email", :with => email
+  fill_in "user_password", :with => password
   click_button "Sign in"
 end
 
-When(/^TestUser visits the add book page$/) do
+When /^(\w+) adds a book on the add book page$/ do |user|
   visit '/books/new'
-end
-
-When(/^TestUser adds a book$/) do
   fill_in "Author", :with => 'Judy Bloom'
   fill_in "Title", :with => 'Blubber'
   fill_in "Isbn", :with => '123456789'
@@ -18,8 +20,20 @@ When(/^TestUser adds a book$/) do
 end
 
 Then(/^The book is added to the libarary database, but is not approved$/) do
-  expect(page).to have_content 'Book was successfully created'
+  expect(page).to have_content('Book was successfully created')
   expect(page).to have_content 'Active: false'
+end
+
+Given(/^No one is logged in$/) do
+
+end
+
+And (/^User visits the add book page$/) do
+  visit '/books/new'
+end
+
+Then(/^The User is redirected to the sign in page$/) do
+    expect(page).to have_content 'Forgot your password?'
 end
 
 Given(/^TestAdmin is logged in$/) do
