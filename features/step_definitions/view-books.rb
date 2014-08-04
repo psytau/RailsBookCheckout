@@ -14,12 +14,12 @@ When(/^TestUser adds a book$/) do
   fill_in "Title", :with => 'Blubber'
   fill_in "Isbn", :with => '123456789'
   fill_in "Rating", :with => '4'
-  click_button "Create book"
+  click_button "Create Book"
 end
 
 Then(/^The book is added to the libarary database, but is not approved$/) do
-  expect(page).to have_content 'Success'
-  expect(page).to have_content 'Unapproved'
+  expect(page).to have_content 'Book was successfully created'
+  expect(page).to have_content 'Active: false'
 end
 
 Given(/^TestAdmin is logged in$/) do
