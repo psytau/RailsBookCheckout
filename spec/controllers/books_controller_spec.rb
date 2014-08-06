@@ -24,7 +24,10 @@ RSpec.describe BooksController, :type => :controller do
   # Book. As you add validations to Book, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      author: 'Judy Bloom',
+      title: 'Blubber'
+    }
   }
 
   let(:invalid_attributes) {
@@ -35,6 +38,12 @@ RSpec.describe BooksController, :type => :controller do
   # in order to pass any filters (e.g. authentication) defined in
   # BooksController. Be sure to keep this updated too.
   let(:valid_session) { {} }
+
+
+  before :each do
+    @user = create(:user)
+    sign_in @user
+  end
 
   describe "GET index" do
     it "assigns all books as @books" do

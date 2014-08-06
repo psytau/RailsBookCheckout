@@ -11,6 +11,7 @@ gem 'devise'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'sqlite3'
+  gem "factory_girl_rails", "~> 4.0"
 end
 group :production do
   gem 'pg', '~> 0.17.1'
@@ -18,6 +19,7 @@ group :production do
 end
 group :test do
   gem 'cucumber-rails', :require => false
+  gem 'capybara'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
