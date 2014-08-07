@@ -5,4 +5,9 @@ class Book < ActiveRecord::Base
   def approved
     !approved_at.blank?
   end
+
+  has_attachments :photos, maximum: 1
+
+  validates :photos, presence: true
+
 end
