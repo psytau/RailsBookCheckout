@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Admin
-User.create!( firstname: 'Admin',
+admin = User.create!( firstname: 'Admin',
               lastname: 'Admin',
               email: 'a@a.com',
               admin: true,
@@ -18,6 +18,8 @@ User.create!( firstname: 'Admin',
               password: '12345678',
               password_confirmation: '12345678'
 )
+
+admin.add_role "admin"
 
 #Normie
 User.create!( firstname: 'Tom',
@@ -31,3 +33,7 @@ User.create!( firstname: 'Tom',
               password: '12345678',
               password_confirmation: '12345678'
 )
+
+Book.create!( author: 'Steven King',
+              title: 'IT'
+  )
