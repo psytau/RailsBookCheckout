@@ -21,7 +21,8 @@ end
 
 Then(/^The book is added to the libarary database, but is not approved$/) do
   expect(page).to have_content('Book was successfully created')
-  expect(page).to have_content 'Active: false'
+  book = Book.last
+  expect(book.active).to be_falsey
 end
 
 Given(/^No one is logged in$/) do
@@ -36,25 +37,35 @@ Then(/^The User is redirected to the sign in page$/) do
     expect(page).to have_content 'Forgot your password?'
 end
 
-Given(/^TestAdmin is logged in$/) do
-  pending # express the regexp above with the code you wish you had
+When(/^TestAdmin is logged in$/) do
+  click_link "Logout"
+  @admin = FactoryGirl.create(:admin)
+  print @admin.email
+  print @admin.is_admin?
+  visit '/users/sign_in'
+  fill_in "user_email", :with => @admin.email
+  fill_in "user_password", :with => @admin.password
+  click_button "Sign in"
 end
 
-Given(/^There is a book that has beed added, but approved$/) do
-  pending # express the regexp above with the code you wish you had
+And(/^The Book is not approved$/) do
+  book = Book.last
+  expect(book.active).to be_falsey
 end
 
-When(/^TestAdmin visits the approve books page$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-When(/^TestAdmin approves the book$/) do
-  pending # express the regexp above with the code you wish you had
+When(/^TestAdmin visits the approve books page and approves the book$/) do
+  book = Book.last
+  visit "/books/#{book.id}/edit"
+  check 'Active'
+  click_button 'Update Book'
 end
 
 Then(/^The book is now approved$/) do
-  pending # express the regexp above with the code you wish you had
+  book = Book.last
+  expect(book.active).to be_truthy
 end
+
+
 
 Given(/^User visits the webpage$/) do
   pending # express the regexp above with the code you wish you had

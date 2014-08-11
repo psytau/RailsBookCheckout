@@ -12,8 +12,9 @@ Scenario: I am not logged in, and add a book
     Then The User is redirected to the sign in page
 
 Scenario: I am an admin and I want to approve a book
-    Given TestAdmin is logged in
-    And There is a book that has beed added, but approved
-    When TestAdmin visits the approve books page
-    And TestAdmin approves the book
+    Given TestUser is logged in
+    And TestUser adds a book on the add book page
+    And The Book is not approved
+    When TestAdmin is logged in
+    And TestAdmin visits the approve books page and approves the book
     Then The book is now approved
