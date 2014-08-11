@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Admin
-User.create!( firstname: 'Admin',
+admin = User.create!( firstname: 'Admin',
               lastname: 'Admin',
               email: 'a@a.com',
-              admin: true,
+              # admin: true, # use rolify instead of a db flag
               address: '123 Fake Street',
               city: 'Seattle',
               state: 'WA',
@@ -19,11 +19,13 @@ User.create!( firstname: 'Admin',
               password_confirmation: '12345678'
 )
 
+admin.add_role "admin"
+
 #Normie
 User.create!( firstname: 'Tom',
               lastname: 'Fakerson',
               email: 'b@b.com',
-              admin: false,
+              # admin: false,
               address: '123 Fake Street',
               city: 'Seattle',
               state: 'WA',
@@ -31,3 +33,7 @@ User.create!( firstname: 'Tom',
               password: '12345678',
               password_confirmation: '12345678'
 )
+
+Book.create!( author: 'Steven King',
+              title: 'IT'
+  )

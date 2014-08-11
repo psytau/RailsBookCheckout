@@ -8,6 +8,6 @@ class Book < ActiveRecord::Base
 
   has_attachments :photos, maximum: 1
 
-  validates :photos, presence: true
+  # validates :photos, presence: true
 
 end

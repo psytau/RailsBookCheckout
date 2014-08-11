@@ -7,11 +7,15 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'cancancan'
+gem 'rolify'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'sqlite3'
   gem "factory_girl_rails", "~> 4.0"
+  gem 'launchy'
 end
 group :production do
   gem 'pg', '~> 0.17.1'

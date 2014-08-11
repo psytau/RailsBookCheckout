@@ -31,14 +31,12 @@
     <%= f.label :rating %><br>
     <%= f.number_field :rating %>
   </div>
-  <div class="field">
-    <%= f.label :active %><br>
-    <%= f.check_box :active %>
-  </div>
-  <div class="field">
-    <%= f.label :approved_at %><br>
-    <%= f.datetime_select :approved_at %>
-  </div>
+  <% if can? :approve, @book %>
+    <div class="field">
+      <%= f.label :active %><br>
+      <%= f.check_box :active %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
