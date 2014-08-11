@@ -10,7 +10,7 @@
 admin = User.create!( firstname: 'Admin',
               lastname: 'Admin',
               email: 'a@a.com',
-              admin: true,
+              # admin: true, # use rolify instead of a db flag
               address: '123 Fake Street',
               city: 'Seattle',
               state: 'WA',
@@ -25,7 +25,7 @@ admin.add_role "admin"
 User.create!( firstname: 'Tom',
               lastname: 'Fakerson',
               email: 'b@b.com',
-              admin: false,
+              # admin: false,
               address: '123 Fake Street',
               city: 'Seattle',
               state: 'WA',

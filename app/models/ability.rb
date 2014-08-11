@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user.admin?
+    if user.is_admin?  # use rolify
       can :approve, Book
     end
     # Define abilities for the passed in user here. For example:
