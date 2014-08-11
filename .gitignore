@@ -16,3 +16,6 @@
 /tmp
 
 .idea/*
+
+# Ignore all API keys
+/config/cloudinary.yml

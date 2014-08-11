@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :books
+
+  mount Attachinary::Engine => "/attachinary"
 end
