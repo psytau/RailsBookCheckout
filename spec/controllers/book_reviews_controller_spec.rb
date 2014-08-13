@@ -24,22 +24,23 @@ RSpec.describe BookReviewsController, :type => :controller do
   # BookReview. As you add validations to BookReview, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { content: 'A good book.' }
   }
 
   let(:invalid_attributes) {
     skip("Add a hash of attributes invalid for your model")
   }
 
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # BookReviewsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  before :each do
+    @user = create(:user)
+    sign_in @user
+    @book = create(:book)
+  end
 
   describe "GET index" do
     it "assigns all book_reviews as @book_reviews" do
-      book_review = BookReview.create! valid_attributes
-      get :index, {}, valid_session
+      book_review = BookReview.create!
+      get :index, {}
       expect(assigns(:book_reviews)).to eq([book_review])
     end
   end
@@ -47,14 +48,14 @@ RSpec.describe BookReviewsController, :type => :controller do
   describe "GET show" do
     it "assigns the requested book_review as @book_review" do
       book_review = BookReview.create! valid_attributes
-      get :show, {:id => book_review.to_param}, valid_session
+      get :show, {:id => book_review.to_param}
       expect(assigns(:book_review)).to eq(book_review)
     end
   end
 
   describe "GET new" do
     it "assigns a new book_review as @book_review" do
-      get :new, {}, valid_session
+      get :new, {:book_id => @book.id.to_s}
       expect(assigns(:book_review)).to be_a_new(BookReview)
     end
   end
@@ -62,7 +63,7 @@ RSpec.describe BookReviewsController, :type => :controller do
   describe "GET edit" do
     it "assigns the requested book_review as @book_review" do
       book_review = BookReview.create! valid_attributes
-      get :edit, {:id => book_review.to_param}, valid_session
+      get :edit, {:id => book_review.to_param}
       expect(assigns(:book_review)).to eq(book_review)
     end
   end
@@ -71,30 +72,30 @@ RSpec.describe BookReviewsController, :type => :controller do
     describe "with valid params" do
       it "creates a new BookReview" do
         expect {
-          post :create, {:book_review => valid_attributes}, valid_session
+          post :create, {:book_review => valid_attributes}
         }.to change(BookReview, :count).by(1)
       end
 
       it "assigns a newly created book_review as @book_review" do
-        post :create, {:book_review => valid_attributes}, valid_session
+        post :create, {:book_review => valid_attributes}
         expect(assigns(:book_review)).to be_a(BookReview)
         expect(assigns(:book_review)).to be_persisted
       end
 
       it "redirects to the created book_review" do
-        post :create, {:book_review => valid_attributes}, valid_session
+        post :create, {:book_review => valid_attributes}
         expect(response).to redirect_to(BookReview.last)
       end
     end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved book_review as @book_review" do
-        post :create, {:book_review => invalid_attributes}, valid_session
+        post :create, {:book_review => invalid_attributes}
         expect(assigns(:book_review)).to be_a_new(BookReview)
       end
 
       it "re-renders the 'new' template" do
-        post :create, {:book_review => invalid_attributes}, valid_session
+        post :create, {:book_review => invalid_attributes}
         expect(response).to render_template("new")
       end
     end
@@ -108,20 +109,20 @@ RSpec.describe BookReviewsController, :type => :controller do
 
       it "updates the requested book_review" do
         book_review = BookReview.create! valid_attributes
-        put :update, {:id => book_review.to_param, :book_review => new_attributes}, valid_session
+        put :update, {:id => book_review.to_param, :book_review => new_attributes}
         book_review.reload
         skip("Add assertions for updated state")
       end
 
       it "assigns the requested book_review as @book_review" do
         book_review = BookReview.create! valid_attributes
-        put :update, {:id => book_review.to_param, :book_review => valid_attributes}, valid_session
+        put :update, {:id => book_review.to_param, :book_review => valid_attributes}
         expect(assigns(:book_review)).to eq(book_review)
       end
 
       it "redirects to the book_review" do
         book_review = BookReview.create! valid_attributes
-        put :update, {:id => book_review.to_param, :book_review => valid_attributes}, valid_session
+        put :update, {:id => book_review.to_param, :book_review => valid_attributes}
         expect(response).to redirect_to(book_review)
       end
     end
@@ -129,13 +130,13 @@ RSpec.describe BookReviewsController, :type => :controller do
     describe "with invalid params" do
       it "assigns the book_review as @book_review" do
         book_review = BookReview.create! valid_attributes
-        put :update, {:id => book_review.to_param, :book_review => invalid_attributes}, valid_session
+        put :update, {:id => book_review.to_param, :book_review => invalid_attributes}
         expect(assigns(:book_review)).to eq(book_review)
       end
 
       it "re-renders the 'edit' template" do
         book_review = BookReview.create! valid_attributes
-        put :update, {:id => book_review.to_param, :book_review => invalid_attributes}, valid_session
+        put :update, {:id => book_review.to_param, :book_review => invalid_attributes}
         expect(response).to render_template("edit")
       end
     end
@@ -145,13 +146,13 @@ RSpec.describe BookReviewsController, :type => :controller do
     it "destroys the requested book_review" do
       book_review = BookReview.create! valid_attributes
       expect {
-        delete :destroy, {:id => book_review.to_param}, valid_session
+        delete :destroy, {:id => book_review.to_param}
       }.to change(BookReview, :count).by(-1)
     end
 
     it "redirects to the book_reviews list" do
       book_review = BookReview.create! valid_attributes
-      delete :destroy, {:id => book_review.to_param}, valid_session
+      delete :destroy, {:id => book_review.to_param}
       expect(response).to redirect_to(book_reviews_url)
     end
   end
