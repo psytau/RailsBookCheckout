@@ -18,6 +18,7 @@ group :development, :test do
   gem 'launchy'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'thin'
 end
 group :production do
   gem 'pg', '~> 0.17.1'
