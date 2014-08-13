@@ -16,6 +16,8 @@ group :development, :test do
   gem 'sqlite3'
   gem "factory_girl_rails", "~> 4.0"
   gem 'launchy'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 group :production do
   gem 'pg', '~> 0.17.1'
