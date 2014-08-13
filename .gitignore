@@ -19,3 +19,6 @@
 
 # Ignore all API keys
 /config/cloudinary.yml
+
+# Ignore Simple Cov reports
+/coverage

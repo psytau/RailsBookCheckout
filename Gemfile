@@ -11,6 +11,8 @@ gem 'twitter-bootstrap-rails'
 gem 'cancancan'
 gem 'rolify'
 
+gem 'simplecov', :require => false, :group => :test
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'sqlite3'
