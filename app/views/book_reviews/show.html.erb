@@ -7,13 +7,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @book_review.user %>
+  <%= @book_review.user.email %>
 </p>
 
 <p>
   <strong>Book:</strong>
-  <%= @book_review.book %>
+  <%= @book_review.book.title %>
 </p>
 
 <%= link_to 'Edit', edit_book_review_path(@book_review) %> |
-<%= link_to 'Back', book_reviews_path %>

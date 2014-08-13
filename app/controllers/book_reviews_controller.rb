@@ -15,6 +15,13 @@ class BookReviewsController < ApplicationController
   # GET /book_reviews/new
   def new
     @book_review = BookReview.new
+    if params[:book_id] =~ /^\d+$/
+      @book_id = params[:book_id]
+    else
+      # TODO: gracefully error out
+      fail
+    end
+
   end
 
   # GET /book_reviews/1/edit
@@ -25,6 +32,7 @@ class BookReviewsController < ApplicationController
   # POST /book_reviews.json
   def create
     @book_review = BookReview.new(book_review_params)
+    @book_review.user = current_user
 
     respond_to do |format|
       if @book_review.save
@@ -69,6 +77,6 @@ class BookReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_review_params
-      params.require(:book_review).permit(:content, :user_id, :book_id)
+      params.require(:book_review).permit(:content, :book_id)
     end
 end

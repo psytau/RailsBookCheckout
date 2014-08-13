@@ -37,4 +37,7 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+<br>
+<%= link_to 'Add Review', new_book_review_path({:book_id => @book.id}) %>
 </div>
