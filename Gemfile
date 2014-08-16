@@ -11,11 +11,16 @@ gem 'twitter-bootstrap-rails'
 gem 'cancancan'
 gem 'rolify'
 
+gem 'simplecov', :require => false, :group => :test
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'sqlite3'
   gem "factory_girl_rails", "~> 4.0"
   gem 'launchy'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'thin'
 end
 group :production do
   gem 'pg', '~> 0.17.1'
