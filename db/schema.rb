@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812172003) do
+ActiveRecord::Schema.define(version: 20140816014343) do
 
   create_table "attachinary_files", force: true do |t|
     t.integer  "attachinariable_id"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 20140812172003) do
   end
 
   add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent"
+
+  create_table "book_ratings", force: true do |t|
+    t.integer  "rating"
+    t.integer  "book_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "book_ratings", ["book_id"], name: "index_book_ratings_on_book_id"
+  add_index "book_ratings", ["user_id"], name: "index_book_ratings_on_user_id"
 
   create_table "book_reviews", force: true do |t|
     t.text     "content"
