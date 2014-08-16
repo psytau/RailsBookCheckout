@@ -20,6 +20,7 @@ class BookRatingsController < ApplicationController
 
     respond_to do |format|
       if @book_rating.save
+        format.js {render @book_rating}
         format.json {render json: @book_rating}
       else
         format.json { render json: @book_rating.errors, status: :unprocessable_entity }
