@@ -1,6 +1,7 @@
 class Book < ActiveRecord::Base
   validates :author, :title, presence: true
-  has_many :reservation
+  has_many :reservations
+  has_many :ratings
 
   def approved
     !approved_at.blank?
@@ -9,5 +10,9 @@ class Book < ActiveRecord::Base
   has_attachments :photos, maximum: 1
 
   # validates :photos, presence: true
+
+  def average_rating
+    ratings.where("score != 0").sum("score") / Rating.count
+  end
 
 end

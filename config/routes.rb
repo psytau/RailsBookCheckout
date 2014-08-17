@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   resources :books
 
+  resources :ratings
+
   mount Attachinary::Engine => "/attachinary"
 end
