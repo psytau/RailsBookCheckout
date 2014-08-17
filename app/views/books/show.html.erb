@@ -64,6 +64,22 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+<br>
+<%# TODO: only show this form to logged in users %>
+<%# TODO: if logged in, and use has rated the book already, do edit instead of new. %>
+<%# TODO: change to stars %>
+<%= form_for(BookRating.new(book: @book), remote: true) do |f| %>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %>
+  </div>
+  <%= f.hidden_field :book_id, value: @book.id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 <br>
 <%= link_to 'Add Review', new_review_for_book_path(@book) %>
 </div>
