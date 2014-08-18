@@ -12,7 +12,13 @@ class Book < ActiveRecord::Base
   # validates :photos, presence: true
 
   def average_rating
-    ratings.where("score != 0").sum("score") / Rating.count
+    count = ratings.count  # count ratings for this book
+    if count > 0
+      sum_of_ratings = ratings.where("score != 0").sum("score")
+      return sum_of_ratings/count
+    else
+      return 0
+    end
   end
 
 end
