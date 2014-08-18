@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/users'
+
   resources :book_reviews
 
   devise_for :users
