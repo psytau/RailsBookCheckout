@@ -8,7 +8,6 @@ RSpec.describe "books/index", :type => :view do
         :title => "Title",
         :status => "Status",
         :isbn => "Isbn",
-        :rating => 1,
         :active => false
       ),
       Book.create!(
@@ -16,7 +15,6 @@ RSpec.describe "books/index", :type => :view do
         :title => "Title",
         :status => "Status",
         :isbn => "Isbn",
-        :rating => 1,
         :active => false
       )
     ])
@@ -28,7 +26,6 @@ RSpec.describe "books/index", :type => :view do
     assert_select "tr>td", :text => "Title".to_s, :count => 2
     assert_select "tr>td", :text => "Status".to_s, :count => 2
     assert_select "tr>td", :text => "Isbn".to_s, :count => 2
-    assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => false.to_s, :count => 2
   end
 end
