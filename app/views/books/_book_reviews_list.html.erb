@@ -1,0 +1,10 @@
+<div>Reviews</div>
+<% @book_reviews.each do |review| %>
+  <div>
+    Review by: 
+    <%= review.user.email %>
+  </div>
+  <div>
+    <%= review.content %>
+  </div>
+<% end %>
