@@ -12,6 +12,8 @@ class BooksController < ApplicationController
   # GET /books/1.json
   def show
     @book = Book.find(params[:id])
+    @book_review = BookReview.new book: @book
+    @book_reviews = @book.book_reviews
     @user = current_user
     if @user
       @rating =
