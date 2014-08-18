@@ -22,8 +22,35 @@
 
 <p>
   <strong>Rating:</strong>
-  <%= @book.rating %>
-</p>
+  <div id="star"></div>
+
+  <script>
+      $('#star').raty({
+          readOnly: true,
+          start: <%= @book.average_rating %>,
+          path: '/assets'
+      });
+  </script>
+
+  <% if @user %>
+    <strong>User Rating:</strong>
+    <div id="user_star"></div>
+  </p>
+
+    <script>
+      $('#user_star').raty({
+          start: <%= @rating.score %>,
+          path: '/assets',
+          click: function(score, evt) {
+              $.ajax({
+                  url: '/ratings/' + <%= @rating.id %>,
+                  type: 'PATCH',
+                  data: { score: score }
+              });
+          }
+      });
+    </script>
+  <% end %>
 
 <p>
   <strong>Active:</strong>

@@ -10,6 +10,9 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'cancancan'
 gem 'rolify'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'jazz_hands'
 
 gem 'simplecov', :require => false, :group => :test
 
@@ -21,6 +24,8 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'thin'
+
+
 end
 group :production do
   gem 'pg', '~> 0.17.1'

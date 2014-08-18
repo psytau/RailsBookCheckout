@@ -22,7 +22,7 @@ admin = User.create!( firstname: 'Admin',
 admin.add_role "admin"
 
 #Normie
-User.create!( firstname: 'Tom',
+normie = User.create!( firstname: 'Tom',
               lastname: 'Fakerson',
               email: 'b@b.com',
               # admin: false,
@@ -34,6 +34,24 @@ User.create!( firstname: 'Tom',
               password_confirmation: '12345678'
 )
 
-Book.create!( author: 'Steven King',
-              title: 'IT'
+book = Book.create!( author: 'Steven King',
+              title: 'IT',
+              status: 'Available',
+              isbn: '32T09JV4OV4IN3409J',
+              active: true,
+              approved_at: Time.now
+
   )
+
+Book.create!( author: 'Stephen Baxter',
+              title: 'Vacuum Diagrams',
+              status: 'Available',
+              isbn: '0061059048',
+              active: true,
+              approved_at: Time.now
+
+)
+
+Rating.create!(user: normie,
+               book: book,
+               score: 3)

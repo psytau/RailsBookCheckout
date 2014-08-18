@@ -11,6 +11,16 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @book = Book.find(params[:id])
+    @user = current_user
+    if @user
+      @rating =
+        if Rating.where("book_id = ? AND user_id = ?", @book.id, @user.id).empty?
+          Rating.create!(user: @user, book: @book)
+        else
+          Rating.where("book_id = ? AND user_id = ?", @book.id, @user.id).first
+        end
+    end
   end
 
   # GET /books/new
