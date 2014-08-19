@@ -1,2 +1,19 @@
-<h1>Admin#users</h1>
-<p>Find me in app/views/admin/users.html.erb</p>
+<h1>Users</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <td> email </td>
+      <td> is admin </td>
+    </tr>
+  </thead>
+<% @users.each do |u| %>
+  <tr>
+    <td>
+      <%= u.email %>
+    </td>
+    <td>
+      <%= render 'make_admin_checkbox', user: u %>
+    </td>
+  </tr>
+<% end %>
+</table>
