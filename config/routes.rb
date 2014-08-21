@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'admin/users'
   get 'admin/make_admin'
+  get 'admin/user_can_review'
 
   resources :book_reviews
 

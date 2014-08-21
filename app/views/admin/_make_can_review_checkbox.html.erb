@@ -1,0 +1,5 @@
+<input type="checkbox"
+       onclick="toggle_can_review({user_id: <%=user.id%>, can_review: <%=not temp_val%>})" 
+       <%= "checked" if temp_val %>
+       <%= "disabled" if current_user.id == user.id %>
+>
