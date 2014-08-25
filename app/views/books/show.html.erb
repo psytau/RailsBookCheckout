@@ -62,7 +62,9 @@
   <%= @book.approved_at %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
+<% if can? :update, @book %> 
+  <%= link_to 'Edit', edit_book_path(@book) %> |
+<% end %>
 <%= link_to 'Back', books_path %>
 <br>
 <%= link_to 'Add Review', new_review_for_book_path(@book) %>
