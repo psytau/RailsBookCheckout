@@ -20,4 +20,25 @@ class TransactionalMailer
 
     sending = m.messages.send message
   end
+
+
+  def user_mailer ( user_email, trigger_id )
+    puts user_email
+    user = User.find_by(id: user_email)
+    if trigger_id == 2 
+      if user.review_email && user.daily_summary == false
+        self.send_mail(user.email, trigger_id)
+      elsif user.review_email && user.daily_summary 
+        #Save event to database
+      end
+    elsif trigger_id == 3
+      if user.rate_email && user.daily_summary == false
+        self.send_mail(user.email, trigger_id)
+      elsif user.rate_email  && user.daily_summary 
+        #Save event to database
+      end
+    else 
+      self.send_mail(user.email, trigger_id)      
+    end
+  end
 end
