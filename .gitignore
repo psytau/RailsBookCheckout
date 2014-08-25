@@ -22,3 +22,6 @@
 
 # Ignore Simple Cov reports
 /coverage
+
+# Ignore application configuration
+/config/application.yml
