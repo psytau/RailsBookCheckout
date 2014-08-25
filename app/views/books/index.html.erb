@@ -22,14 +22,14 @@
         <td><%= link_to book.title, book %></td>
         <td><%= book.status %></td>
         <td><%= book.isbn %></td>
-        <td><div id="star"></div></td>
+        <td><div id="star_<%= book.id %>"></div></td>
         <td><%= book.active %></td>
         <td><%= book.approved_at %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %>
             <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <script>
-          $('#star').raty({
+        $('#star_<%= book.id %>').raty({
               readOnly: true,
               start: <%= book.average_rating %>,
               path: '/assets'
