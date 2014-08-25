@@ -10,6 +10,11 @@ RSpec.describe "books/show", :type => :view do
       :rating => 1,
       :active => false
     ))
+    # mock cancan abilities
+    # http://stackoverflow.com/questions/5018344/testing-views-that-use-cancan-and-devise-with-rspec
+    @ability = Object.new
+    @ability.extend(CanCan::Ability)
+    controller.stub(:current_ability) { @ability }
   end
 
   it "renders attributes in <p>" do
