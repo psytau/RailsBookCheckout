@@ -39,7 +39,8 @@ book = Book.create!( author: 'Steven King',
               status: 'Available',
               isbn: '32T09JV4OV4IN3409J',
               active: true,
-              approved_at: Time.now
+              approved_at: Time.now,
+              user: normie
 
   )
 
@@ -48,7 +49,8 @@ Book.create!( author: 'Stephen Baxter',
               status: 'Available',
               isbn: '0061059048',
               active: true,
-              approved_at: Time.now
+              approved_at: Time.now,
+              user: normie
 
 )
 

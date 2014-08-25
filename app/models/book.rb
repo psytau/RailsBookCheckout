@@ -2,6 +2,7 @@ class Book < ActiveRecord::Base
   validates :author, :title, presence: true
   has_many :reservations
   has_many :ratings
+  belongs_to :user
 
   def approved
     !approved_at.blank?
