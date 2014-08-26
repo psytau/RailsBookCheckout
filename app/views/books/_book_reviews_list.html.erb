@@ -1,10 +1,6 @@
 <div>Reviews</div>
-<% @book_reviews.each do |review| %>
-  <div>
-    Review by: 
-    <%= review.user.email %>
-  </div>
-  <div>
-    <%= review.content %>
-  </div>
-<% end %>
+<div id='book_reviews_container'>
+  <% @book_reviews.each do |review| %>
+    <%= render review %>
+  <% end %>
+</div>
