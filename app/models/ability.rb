@@ -5,6 +5,7 @@ class Ability
     if user.is_admin?  # use rolify
       can :approve, Book
       can :manage, :all
+      can :admin, :site
     else
       can [:update, :destroy], Book, user_id: user.id
     end

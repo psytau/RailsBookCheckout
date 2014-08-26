@@ -3,6 +3,7 @@ class Book < ActiveRecord::Base
   has_many :reservations
   has_many :ratings
   belongs_to :user
+  has_many :book_reviews
 
   def approved
     !approved_at.blank?
