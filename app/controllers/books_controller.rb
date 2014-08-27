@@ -24,9 +24,18 @@ class BooksController < ApplicationController
     else
       if params[:column]
         sort_params = search_sort_by
-        @books = Book.order("#{sort_params[:column]} #{sort_params[:order]}")
+
+        if params[:column] == "rating"
+          if params[:order] == "asc"
+            @books = Book.sorted_by_rating
+          else
+            @books = Book.sorted_by_rating.reverse
+          end
+        else
+          @books = Book.order("#{sort_params[:column]} #{sort_params[:order]}")
+        end
       else
-        @books = Book.all
+        @books = Book.sorted_by_rating.reverse
       end
     end
   end

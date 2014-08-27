@@ -5,7 +5,6 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.string :status
       t.string :isbn
-      t.integer :rating
       t.string :tags
       t.string :review
       t.boolean :active
