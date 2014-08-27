@@ -4,7 +4,7 @@
 <table style="width:100%">
   <thead>
     <tr>
-      <th>Author</th>
+      <th><%= link_to "Author", books_path(:column => "author", :order => params[:sort] || 'asc') %></th>
       <th>Title</th>
       <th>Status</th>
       <th>ISBN</th>
