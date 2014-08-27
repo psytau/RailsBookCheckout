@@ -1,4 +1,7 @@
 class Book < ActiveRecord::Base
+  searchable do
+    text :author, :title, :isbn, :tags, :rating, :review
+  end
   validates :author, :title, presence: true
   has_many :reservations
   has_many :ratings

@@ -2,10 +2,33 @@ class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
+  include SortHelper
+
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    if params[:q]
+      results = Book.search do
+        fulltext params[:q] do
+          boost_fields :isbn => 5.0
+          boost_fields :author => 3.0
+          boost_fields :title => 3.0
+          boost_fields :rating => 3.0
+        end
+        if params[:column]
+          sort_params = search_sort_by
+          order_by(sort_params[:column], sort_params[:order])
+        end
+      end
+      @books = results.results
+    else
+      if params[:column]
+        sort_params = search_sort_by
+        @books = Book.order("#{sort_params[:column]} #{sort_params[:order]}")
+      else
+        @books = Book.all
+      end
+    end
   end
 
   # GET /books/1
