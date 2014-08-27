@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825021954) do
+ActiveRecord::Schema.define(version: 20140827023837) do
 
   create_table "attachinary_files", force: true do |t|
     t.integer  "attachinariable_id"
@@ -111,6 +111,8 @@ ActiveRecord::Schema.define(version: 20140825021954) do
     t.boolean  "rate_email",             default: true
     t.boolean  "review_email",           default: true
     t.boolean  "daily_summary",          default: false
+    t.integer  "rate_email_summary",     default: 0
+    t.integer  "review_email_summary",   default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -29,13 +29,13 @@ class TransactionalMailer
       if user.review_email && user.daily_summary == false
         self.send_mail(user.email, trigger_id)
       elsif user.review_email && user.daily_summary 
-        #Save event to database
+        @user.incriment!(:review_email_summary)
       end
     elsif trigger_id == 3
       if user.rate_email && user.daily_summary == false
         self.send_mail(user.email, trigger_id)
       elsif user.rate_email  && user.daily_summary 
-        #Save event to database
+        @user.increment!(:rate_email_summary)
       end
     else 
       self.send_mail(user.email, trigger_id)      
