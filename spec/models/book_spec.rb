@@ -14,7 +14,7 @@ RSpec.describe Book, :type => :model do
       Rating.create(user: user2, book: book, score: 4)
       Rating.create(user: user3, book: book, score: 3)
 
-      expect(book.average_rating).to eq(4)
+      expect(book.rating).to eq(4)
     end
   end
 end
