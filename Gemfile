@@ -24,6 +24,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'thin'
   gem 'jazz_hands'
+  gem 'selenium-webdriver'
 
 end
 group :production do
