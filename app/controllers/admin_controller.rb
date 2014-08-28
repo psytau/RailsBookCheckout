@@ -7,13 +7,15 @@ class AdminController < ApplicationController
   end
 
   def can_do_review user, can_do_it
-    # TODO: fill this in
-    render json: {user_id: user.id, can_do_it: can_do_it, it: :review}
+    user.banned_from_reviewing = !can_do_it
+    user.save!
+    render json: {user_id: user.id, can_do_it:  !user.banned_from_reviewing, it: :review}
   end
 
   def can_do_rate user, can_do_it
-    # TODO: fill this in
-    render json: {user_id: user.id, can_do_it: can_do_it, it: :rate}
+    user.banned_from_rating = !can_do_it
+    user.save!
+    render json: {user_id: user.id, can_do_it: !user.banned_from_rating, it: :rate}
   end
 
   def can_do_admin user, can_do_it
@@ -22,6 +24,7 @@ class AdminController < ApplicationController
     else
       user.remove_role :admin
     end
+    user.save!
     render json: {:user_id => user.id, :can_do_it=> user.is_admin?, it: :admin}
   end
 

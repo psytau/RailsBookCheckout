@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825055306) do
+ActiveRecord::Schema.define(version: 20140828063348) do
 
   create_table "attachinary_files", force: true do |t|
     t.integer  "attachinariable_id"
@@ -104,6 +104,8 @@ ActiveRecord::Schema.define(version: 20140825055306) do
     t.string   "state"
     t.string   "phone"
     t.boolean  "admin"
+    t.boolean  "banned_from_reviewing"
+    t.boolean  "banned_from_rating"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
