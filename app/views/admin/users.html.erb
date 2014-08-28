@@ -5,6 +5,7 @@
       <td> email </td>
       <td> is admin </td>
       <td> can review books </td>
+      <td> can rate books </td>
     </tr>
   </thead>
 <% @users.each do |u| %>
@@ -13,10 +14,13 @@
       <%= u.email %>
     </td>
     <td>
-      <%= render 'make_admin_checkbox', user: u %>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: u.is_admin?, it: :admin %>
     </td>
     <td>
-      <%= render 'make_can_review_checkbox', user: u, temp_val: true %>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: true, it: :review %>
+    </td>
+    <td>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: true, it: :rate %>
     </td>
   </tr>
 <% end %>

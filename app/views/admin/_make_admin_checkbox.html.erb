@@ -1,5 +1,0 @@
-<input type="checkbox"
-onclick="toggle_admin({user_id: <%=user.id%>, is_admin: <%=not user.is_admin?%>})" 
-<%= "checked" if user.is_admin? %>
-<%= "disabled" if current_user.id == user.id %>
->

@@ -2,27 +2,23 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
-
-document.toggle_admin = (obj) ->
-  console.log('toggle_admin');
-  console.dir(obj);
+toggle_can_do_it = () ->
+  checkboxData = $(this).data()
+  checkboxData.can_do_it = this.checked
+  originalVal = !this.checked
+  checkbox = $(this)
+  checkbox.prop('disabled', true)
   $.ajax
-    url: '/admin/make_admin'
-    data:
-      user_id: obj.user_id
-      is_admin: obj.is_admin
+    url: '/admin/can_do'
+    data: checkboxData
     success: (data, status, XHR) ->
-      console.log('server returned data')
-      console.dir(data)
+      # double check from server that we can change the value
+      $(checkbox).prop('checked', data.can_do_it)
+      $(checkbox).prop('disabled', false)
+    error: () ->
+      $(checkbox).prop('checked', originalVal)
+      $(checkbox).prop('disabled', false)
 
-document.toggle_can_review = (obj) ->
-  console.log('toggle_can_review');
-  console.dir(obj);
-  $.ajax
-    url: '/admin/user_can_review'
-    data:
-      user_id: obj.user_id
-      can_review: obj.can_review
-    success: (data, status, XHR) ->
-      console.log('server returned data')
-      console.dir(data)
+$( () ->
+  $('.can-do-it').change(toggle_can_do_it)
+)

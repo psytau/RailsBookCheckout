@@ -1,0 +1,7 @@
+<div class='container-fluid'>
+  <table class="table">
+    <% @books.each do |book| %>
+      <%= render 'book_table_row', book: book %>
+    <% end %>
+  </table>
+</div>
