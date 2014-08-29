@@ -10,6 +10,7 @@ clone and run bundle install
 
 === Services setup
 * to start search services, run: rake sunspot:solr:start
+* to top solr run: bundle exec sunspot-solr stop
 * You will need mandrill and cloudinary accounts
 * To set up cloudinary, you will need to set up a config/cloudinary.yml file
 * To set up mandrill, you will need a mandrill API key. But the API key into Figaro's config/application.yml file

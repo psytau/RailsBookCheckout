@@ -13,9 +13,13 @@ Rails.application.routes.draw do
 
   get 'books/search', to: 'books#index'
 
+  match 'books/deactivate/:id', to: 'books#toggle_activation', via: :get
+
   resources :books
 
   resources :ratings
+
+  resources :followers
 
   mount Attachinary::Engine => "/attachinary"
 end
