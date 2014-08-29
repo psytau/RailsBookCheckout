@@ -9,6 +9,13 @@ RSpec.describe "books/show", :type => :view do
       :isbn => "Isbn",
       :active => false
     ))
+    # mock cancan abilities
+    # http://stackoverflow.com/questions/5018344/testing-views-that-use-cancan-and-devise-with-rspec
+    @ability = Object.new
+    @ability.extend(CanCan::Ability)
+    controller.stub(:current_ability) { @ability }
+
+    # add a book review
     @book_review = BookReview.new book: @book
     @book_reviews = @book.book_reviews
   end

@@ -1,0 +1,27 @@
+<h1>Users</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <td> email </td>
+      <td> is admin </td>
+      <td> can review books </td>
+      <td> can rate books </td>
+    </tr>
+  </thead>
+<% @users.each do |u| %>
+  <tr>
+    <td>
+      <%= u.email %>
+    </td>
+    <td>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: u.is_admin?, it: :admin %>
+    </td>
+    <td>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: true, it: :review %>
+    </td>
+    <td>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: true, it: :rate %>
+    </td>
+  </tr>
+<% end %>
+</table>

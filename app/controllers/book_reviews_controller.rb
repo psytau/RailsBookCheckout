@@ -1,6 +1,6 @@
 class BookReviewsController < ApplicationController
-  before_action :set_book_review, only: [:show, :edit, :update, :destroy]
-
+  #before_action :set_book_review, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
   # GET /book_reviews
   # GET /book_reviews.json
   def index

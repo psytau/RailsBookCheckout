@@ -52,10 +52,12 @@ ActiveRecord::Schema.define(version: 20140829050838) do
     t.datetime "approved_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
     t.integer  "follower_id"
   end
 
   add_index "books", ["follower_id"], name: "index_books_on_follower_id"
+  add_index "books", ["user_id"], name: "index_books_on_user_id"
 
   create_table "followers", force: true do |t|
     t.integer  "book_id"
@@ -112,6 +114,8 @@ ActiveRecord::Schema.define(version: 20140829050838) do
     t.string   "state"
     t.string   "phone"
     t.boolean  "admin"
+    t.boolean  "banned_from_reviewing"
+    t.boolean  "banned_from_rating"
     t.integer  "follower_id"
   end
 

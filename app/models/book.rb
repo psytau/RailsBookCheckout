@@ -5,9 +5,11 @@ class Book < ActiveRecord::Base
   validates :author, :title, presence: true
   has_many :reservations
   has_many :ratings
+  belongs_to :user
   has_many :book_reviews
   has_many :followers
   attr_accessor :rating
+  scope :active_books, -> {where(active: true)}
 
   def approved
     !approved_at.blank?

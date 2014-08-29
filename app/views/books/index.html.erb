@@ -24,7 +24,13 @@
         <td><%= book.isbn %></td>
         <td><div id="star_<%= book.id %>"></div></td>
         <td><%= book.active == true ? "Y" : "N" %></td>
-        <td><%= book.approved_at.strftime("%m/%d/%Y") %></td>
+        <td>
+          <% if book.approved %>
+            <%= book.approved_at.strftime("%m/%d/%Y") %>
+          <% else %>
+            not approved 
+          <% end %>
+        </td>
         <td>
             <button type="button" class="btn btn-sm btn-primary">
                 <%= link_to 'Edit', edit_book_path(book) %>
@@ -45,6 +51,7 @@
                     <%= link_to 'Destroy', book_path, method: :delete, data: { confirm: 'Are you sure?' } %>
                 </button>
               <% else %>
+                <% if can? :admin, :site%>
                   <% if book.active? %>
                       <button type="button" class="btn btn-sm btn-danger" >
                         <%= link_to "Deactivate", {controller: "books", method: :get, action: "toggle_activation", id: book.id} %>
@@ -54,6 +61,7 @@
                         <%= link_to "Activate", {controller: "books", method: :get, action: "toggle_activation", id: book.id} %>
                       </button>
                   <% end %>
+                <% end %>
               <% end %>
           <% end %>
         </td>
