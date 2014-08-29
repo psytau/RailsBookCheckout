@@ -32,7 +32,7 @@
       });
   </script>
 
-  <% if @user %>
+  <% if can? :create, Rating %>
     <strong>User Rating:</strong>
     <div id="user_star"></div>
   </p>
@@ -62,10 +62,14 @@
   <%= @book.approved_at %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
+<% if can? :update, @book %> 
+  <%= link_to 'Edit', edit_book_path(@book) %> |
+<% end %>
 <%= link_to 'Back', books_path %>
 <br>
 
-<%= render 'book_review_form' %>
+<% if can? :create, BookReview %>
+  <%= render 'book_review_form' %>
+<% end %>
 <%= render 'book_reviews_list' %>
 </div>

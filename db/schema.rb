@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817020808) do
+ActiveRecord::Schema.define(version: 20140828063348) do
 
   create_table "attachinary_files", force: true do |t|
     t.integer  "attachinariable_id"
@@ -51,7 +51,10 @@ ActiveRecord::Schema.define(version: 20140817020808) do
     t.datetime "approved_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "books", ["user_id"], name: "index_books_on_user_id"
 
   create_table "ratings", force: true do |t|
     t.integer  "book_id"
@@ -102,6 +105,8 @@ ActiveRecord::Schema.define(version: 20140817020808) do
     t.string   "state"
     t.string   "phone"
     t.boolean  "admin"
+    t.boolean  "banned_from_reviewing"
+    t.boolean  "banned_from_rating"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
