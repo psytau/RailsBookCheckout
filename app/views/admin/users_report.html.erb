@@ -1,0 +1,19 @@
+<h1> User stats </h1>
+<table class='table'>
+  <tr>
+    <td>user</td>
+    <td>total logins</td>
+    <td>average rating</td>
+    <td>number of reviews</td>
+    <td>number of books entered</td>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.total_logins %></td>
+      <td><%= user.ratings_ave %></td>
+      <td><%= user.book_reviews_count %></td>
+      <td><%= user.books_count %></td>
+    </tr>
+  <% end %>
+</table>
