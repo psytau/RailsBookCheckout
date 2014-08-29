@@ -23,3 +23,10 @@ solr/test
 
 # Ignore Simple Cov reports
 /coverage
+
+#solr
+solr/test/data
+solr/development/data
+solr/default/data
+solr/pids
+*.lck
