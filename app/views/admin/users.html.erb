@@ -22,6 +22,9 @@
     <td>
       <%= render 'make_can_do_checkbox', user: u, can_do_it: true, it: :rate %>
     </td>
+    <td>
+      <a href='/admin/view_as_user/<%= u.id %>'> become user </a>
+    </td>
   </tr>
 <% end %>
 </table>

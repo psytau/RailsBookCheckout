@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for resource
-    #puts 'signed in' + current_user.email
     current_user.increment!(:sign_in_counter)
     super
   end
@@ -13,4 +12,17 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, :alert => exception.message
   end
 
+  # monkey patch this over the one supplied by devise
+  # to be able to switch users as admin
+  def current_user
+    puts 'current_user: '
+    puts session[:view_as_user]
+    if session[:view_as_user]
+      @admin_user = warden.authenticate(scope: :user)
+      @current_user ||= User.find(session[:view_as_user])
+    else
+      @current_user ||= warden.authenticate(scope: :user) # this is as it is in devise
+    end
+    @current_user
+  end
 end

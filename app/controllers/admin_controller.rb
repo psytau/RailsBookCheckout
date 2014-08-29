@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
   before_action :authenticate_user!
-  before_action :auth_admin!
+  before_action :auth_admin!, except: [:view_as_self]
 
   def users
     @users = User.all
@@ -50,8 +50,18 @@ class AdminController < ApplicationController
 
   def users_report
     @users = User.all
-
   end
+
+  def view_as_user
+    session[:view_as_user] = params[:view_as_user]
+    redirect_to '/books'
+  end
+
+  def view_as_self
+    session[:view_as_user] = nil
+    redirect_to '/admin/users'
+  end
+
 
   private
     def auth_admin!
