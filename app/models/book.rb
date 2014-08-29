@@ -4,6 +4,7 @@ class Book < ActiveRecord::Base
   has_many :ratings
   belongs_to :user
   has_many :book_reviews
+  scope :active_books, -> {where(active: true)}
 
   def approved
     !approved_at.blank?
