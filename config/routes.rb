@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'admin/user_can_review'
   get 'admin/books'
   get 'admin/can_do'
+  get 'admin/users_report'
 
   resources :book_reviews
 
