@@ -131,6 +131,11 @@ class BooksController < ApplicationController
   def toggle_activation
     @book.active = !@book.active
 
+    # save book on first activate
+    if @book.active and (not @book.approved_at)
+      @book.approved_at = Time.now
+    end
+
     @book.save
     respond_to do |format|
       format.html { redirect_to books_url, notice: 'Book has been deactivated.' }

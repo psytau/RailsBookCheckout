@@ -48,7 +48,6 @@ class AdminController < ApplicationController
     @books = Book.all
   end
 
-
   private
     def auth_admin!
       authorize! :admin, :site
