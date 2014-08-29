@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'admin/books'
   get 'admin/can_do'
   get 'admin/users_report'
+  get 'admin/view_as_user/:view_as_user', to: 'admin#view_as_user'
+  get 'admin/view_as_self', to: 'admin#view_as_self'
 
   resources :book_reviews
 

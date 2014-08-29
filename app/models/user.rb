@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # stats for users
   def total_logins
     # logins
-    3
+    sign_in_counter
   end
 
   def book_reviews_count
