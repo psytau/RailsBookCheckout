@@ -1,8 +1,5 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :swap_current_user
-  # before_action :set_book, only: [:show, :edit, :update, :destroy]
-  # before_action :set_book, only: [:show, :edit, :update, :destroy, :toggle_activation]
   load_and_authorize_resource
   helper_method :get_follower
 
