@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy, :toggle_activation]
+  helper_method :get_follower
 
   include SortHelper
 
@@ -38,6 +39,7 @@ class BooksController < ApplicationController
         @books = Book.sorted_by_rating.reverse
       end
     end
+    @user = current_user
   end
 
   # GET /books/1
@@ -104,6 +106,19 @@ class BooksController < ApplicationController
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_activation
+    @book.active = !@book.active
+
+    @book.save
+    respond_to do |format|
+      format.html { redirect_to books_url, notice: 'Book has been deactivated.' }
+    end
+  end
+
+  def get_follower user, book
+    Follower.where("user_id = ? and book_id = ?", user.id, book.id).first
   end
 
   private
