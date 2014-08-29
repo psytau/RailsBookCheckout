@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817020808) do
+ActiveRecord::Schema.define(version: 20140829050838) do
 
   create_table "attachinary_files", force: true do |t|
     t.integer  "attachinariable_id"
@@ -45,12 +45,22 @@ ActiveRecord::Schema.define(version: 20140817020808) do
     t.string   "title"
     t.string   "status"
     t.string   "isbn"
+    t.integer  "rating"
     t.string   "tags"
     t.string   "review"
     t.boolean  "active"
     t.datetime "approved_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "follower_id"
+  end
+
+  add_index "books", ["follower_id"], name: "index_books_on_follower_id"
+
+  create_table "followers", force: true do |t|
+    t.integer  "book_id"
+    t.integer  "user_id"
+    t.datetime "followed_date"
   end
 
   create_table "ratings", force: true do |t|
@@ -102,9 +112,11 @@ ActiveRecord::Schema.define(version: 20140817020808) do
     t.string   "state"
     t.string   "phone"
     t.boolean  "admin"
+    t.integer  "follower_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["follower_id"], name: "index_users_on_follower_id"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "users_roles", id: false, force: true do |t|

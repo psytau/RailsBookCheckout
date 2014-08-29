@@ -6,6 +6,7 @@ class Book < ActiveRecord::Base
   has_many :reservations
   has_many :ratings
   has_many :book_reviews
+  has_many :followers
   attr_accessor :rating
 
   def approved
@@ -28,6 +29,17 @@ class Book < ActiveRecord::Base
     else
       return 0
     end
+  end
+
+  def deleteable
+    true
+    if (self.book_reviews.length + self.ratings.length) > 0
+      false
+    end
+  end
+
+  def followed? user
+    Follower.where("user_id = ? and book_id = ?", user.id, self.id).length  > 0 ? true : false
   end
 
 end
