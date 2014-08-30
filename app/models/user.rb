@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
   # stats for users
   def total_logins
     # logins
@@ -15,19 +16,22 @@ class User < ActiveRecord::Base
   end
 
   def book_reviews_count
-    book_reviews.count
+    PublicActivity::Activity.where(owner_id: id, key: 'book_review.create').count
   end
 
   def books_count
-    books.count
+    PublicActivity::Activity.where(owner_id: id, key: 'book.create').count
   end
 
   def ratings_ave
-    if ratings.count > 0
-      ratings.average(:score)
-    else
-      'No ratings'
-    end
+    # this will not work at present, because rating with 0 starts are not counted
+    # as ratings, but will show up here.
+    PublicActivity::Activity.where(owner_id: id, key: 'rating.create').count
+    # if ratings.count > 0
+    #   ratings.average(:score)
+    # else
+    #   'No ratings'
+    # end
   end
 
 end

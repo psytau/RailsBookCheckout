@@ -10,6 +10,7 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'cancancan'
 gem 'rolify'
+gem 'public_activity'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 
