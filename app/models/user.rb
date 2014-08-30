@@ -24,14 +24,12 @@ class User < ActiveRecord::Base
   end
 
   def ratings_ave
-    # this will not work at present, because rating with 0 starts are not counted
-    # as ratings, but will show up here.
-    PublicActivity::Activity.where(owner_id: id, key: 'rating.create').count
-    # if ratings.count > 0
-    #   ratings.average(:score)
-    # else
-    #   'No ratings'
-    # end
+    # need to make it so admins' actions do not affect this score.
+    if ratings.count > 0
+      ratings.average(:score)
+    else
+      'No ratings'
+    end
   end
 
 end
