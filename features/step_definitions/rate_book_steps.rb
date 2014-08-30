@@ -1,10 +1,14 @@
 
 Given(/^A book exists in the system$/) do
-  Book.find_or_create_by(author: "Stupid Guy", title: "Some book")
+  Book.find_or_create_by(author: "Stupid Guy", title: "Some book", approved_at: Time.now)
+end
+
+Given(/^TestUser visits the show book page$/) do
+  visit book_path(Book.first)
 end
 
 Given(/^TestUser visits the book index page$/) do
-  visit book_path(Book.first)
+  visit books_path
 end
 
 When(/^User gives a rating of 5 stars$/) do

@@ -4,12 +4,12 @@
 <table style="width:100%">
   <thead>
     <tr>
-      <th><%= link_to "Author", books_path(:column => "author", :order => search_sort_by[:order]) %></th>
-      <th><%= link_to "Title", books_path(:column => "title", :order => search_sort_by[:order]) %></th>
-      <th><%= link_to "Status", books_path(:column => "status", :order => search_sort_by[:order]) %></th>
-      <th><%= link_to "ISBN", books_path(:column => "isbn", :order => search_sort_by[:order]) %></th>
-      <th><%= link_to "Rating", books_path(:column => "rating", :order => search_sort_by[:order]) %></th>
-      <th><%= link_to "Active", books_path(:column => "active", :order => search_sort_by[:active]) %></th>
+      <th><%= link_to "Author", books_path(:column => "author", :order => search_sort_by[:order]), :class => "author_link" %></th>
+      <th><%= link_to "Title", books_path(:column => "title", :order => search_sort_by[:order]), :class => "title_link" %></th>
+      <th><%= link_to "Status", books_path(:column => "status", :order => search_sort_by[:order]), :class => "status_link" %></th>
+      <th><%= link_to "ISBN", books_path(:column => "isbn", :order => search_sort_by[:order]), :class => "isbn_link" %></th>
+      <th><%= link_to "Rating", books_path(:column => "rating", :order => search_sort_by[:order]), :class => "rating_link" %></th>
+      <th><%= link_to "Active", books_path(:column => "active", :order => search_sort_by[:active]), :class => "active_link" %></th>
       <th>Approved at</th>
       <th>Actions</th>
     </tr>
@@ -18,11 +18,11 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><%= book.author %></td>
-        <td><%= link_to book.title, book %></td>
-        <td><%= book.status %></td>
-        <td><%= book.isbn %></td>
-        <td><div id="star_<%= book.id %>"></div></td>
+        <td id="<%= book.id %>" class="author"><%= book.author %></td>
+        <td id="<%= book.id %>" class="title"><%= link_to book.title, book %></td>
+        <td id="<%= book.id %>" class="status"><%= book.status %></td>
+        <td id="<%= book.id %>" class="isbn"><%= book.isbn %></td>
+        <td id="<%= book.id %>" class="rating"><div id="star_<%= book.id %>"></div></td>
         <td><%= book.active == true ? "Y" : "N" %></td>
         <td>
           <% if book.approved %>
