@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
   include PublicActivity::Model
-  tracked owner: ->(controller, model) { controller.current_user unless controller.admin_user }
+  tracked owner: ->(controller, model) { controller.current_user if (!!controller && !controller.admin_user) }
   searchable do
     text :author, :title, :isbn, :tags, :rating, :review
   end
