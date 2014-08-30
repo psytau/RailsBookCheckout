@@ -32,19 +32,13 @@
           <% end %>
         </td>
         <td>
-            <button type="button" class="btn btn-sm btn-primary">
-                <%= link_to 'Edit', edit_book_path(book) %>
-            </button>
+          <%= link_to 'Edit', edit_book_path(book), class:  "btn btn-sm btn-primary"%>
           <% if user_signed_in? %>
 
               <% if book.followed?(current_user) %>
-                  <button type="button" class="btn btn-sm btn-danger">
-                    <%= link_to "UnFollow", follower_path(get_follower(current_user, book).id), method: :delete %>
-                  </button>
+                    <%= button_to "UnFollow", follower_path(get_follower(current_user, book).id), method: :delete, class: "btn btn-sm btn-danger" %>
               <% else %>
-                  <button type="button" class="btn btn-sm btn-success" >
-                    <%= link_to "Follow", new_follower_path(book_id: book.id), method: :get %>
-                  </button>
+                    <%= link_to "Follow", new_follower_path(book_id: book.id), class:  "btn btn-sm btn-success" %>
               <% end %>
               <% if book.deleteable %>
                 <button type="button" class="btn btn-sm btn-danger">
@@ -53,13 +47,9 @@
               <% else %>
                 <% if can? :admin, :site%>
                   <% if book.active? %>
-                      <button type="button" class="btn btn-sm btn-danger" >
-                        <%= link_to "Deactivate", {controller: "books", method: :get, action: "toggle_activation", id: book.id} %>
-                      </button>
+                        <%= link_to "Deactivate", {controller: "books", action: "toggle_activation", id: book.id}, class: "btn btn-sm btn-danger" %>
                   <% else %>
-                      <button type="button" class="btn btn-sm btn-success">
-                        <%= link_to "Activate", {controller: "books", method: :get, action: "toggle_activation", id: book.id} %>
-                      </button>
+                        <%= link_to "Activate", {controller: "books", action: "toggle_activation", id: book.id}, class: "btn btn-sm btn-success" %>
                   <% end %>
                 <% end %>
               <% end %>
