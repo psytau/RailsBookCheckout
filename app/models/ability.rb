@@ -11,6 +11,7 @@ class Ability
         can :manage, :all
         can :admin, :site
       else
+        can :create, Book
         can [:update, :destroy], Book, :user_id => user.id
         if !user.banned_from_reviewing
           can [:create, :destroy], BookReview
