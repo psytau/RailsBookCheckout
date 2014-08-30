@@ -31,5 +31,12 @@ class User < ActiveRecord::Base
       'No ratings'
     end
   end
+	after_create :send_invitation
 
+	  def send_invitation
+	  	invite_email = TransactionalMailer.new
+	  	trigger = 2
+	  	invite_email.user_mailer(2, 2)
+	  end
 end
+

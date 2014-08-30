@@ -30,3 +30,6 @@ solr/development/data
 solr/default/data
 solr/pids
 *.lck
+
+# Ignore application configuration
+/config/application.yml

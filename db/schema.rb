@@ -111,13 +111,20 @@ ActiveRecord::Schema.define(version: 20140830012923) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
+  create_table "trigger_events", force: true do |t|
+    t.string   "subject"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -135,6 +142,11 @@ ActiveRecord::Schema.define(version: 20140830012923) do
     t.boolean  "banned_from_reviewing"
     t.boolean  "banned_from_rating"
     t.integer  "sign_in_counter"
+    t.boolean  "rate_email",             default: true
+    t.boolean  "review_email",           default: true
+    t.boolean  "daily_summary",          default: false
+    t.integer  "rate_email_summary",     default: 0
+    t.integer  "review_email_summary",   default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
