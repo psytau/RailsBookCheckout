@@ -2,9 +2,28 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user.is_admin?  # use rolify
-      can :approve, Book
+    # anyone can see these
+    can :read, [Book, BookReview, Rating]
+    if user
+      if user.is_admin?  # use rolify
+        can :approve, Book
+        can :toggle_activation, Book
+        can :manage, :all
+        can :admin, :site
+      else
+        can :create, Book
+        can [:update, :destroy], Book, :user_id => user.id
+        if !user.banned_from_reviewing
+          can [:create, :destroy], BookReview
+          can [:update, :destroy], BookReview, :user_id => user.id
+        end
+        if !user.banned_from_rating
+          can [:create, :destroy], Rating
+          can [:update, :destroy], Rating, {:user_id => user.id}
+        end
+      end
     end
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

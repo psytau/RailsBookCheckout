@@ -6,6 +6,8 @@ class CreateBooks < ActiveRecord::Migration
       t.string :status
       t.string :isbn
       t.integer :rating
+      t.string :tags
+      t.string :review
       t.boolean :active
       t.datetime :approved_at
 

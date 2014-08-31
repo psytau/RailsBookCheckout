@@ -39,6 +39,12 @@ RSpec.describe BooksController, :type => :controller do
   # BooksController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
+  def create_book_with_user(user, attributes)
+    book = Book.create! attributes
+    book.user = user
+    book.save!
+    book
+  end
 
   before :each do
     @user = create(:user)
@@ -143,7 +149,7 @@ RSpec.describe BooksController, :type => :controller do
       end
 
       it "re-renders the 'edit' template" do
-        book = Book.create! valid_attributes
+        book = create_book_with_user @user, valid_attributes
         put :update, {:id => book.to_param, :book => invalid_attributes} #, valid_session
         expect(response).to render_template("edit")
       end
@@ -152,14 +158,14 @@ RSpec.describe BooksController, :type => :controller do
 
   describe "DELETE destroy" do
     it "destroys the requested book" do
-      book = Book.create! valid_attributes
+      book = create_book_with_user @user, valid_attributes
       expect {
         delete :destroy, {:id => book.to_param} #, valid_session
       }.to change(Book, :count).by(-1)
     end
 
     it "redirects to the books list" do
-      book = Book.create! valid_attributes
+      book = create_book_with_user @user, valid_attributes
       delete :destroy, {:id => book.to_param} #, valid_session
       expect(response).to redirect_to(books_url)
     end

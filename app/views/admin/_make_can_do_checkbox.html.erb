@@ -1,0 +1,7 @@
+<input type="checkbox"
+       class="can-do-it"
+       data-user="<%=user.id%>"
+       data-it="<%=it%>"
+       <%= "checked" if can_do_it %>
+       <%= "disabled" if current_user.id == user.id %>
+>

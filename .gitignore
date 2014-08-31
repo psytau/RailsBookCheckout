@@ -16,6 +16,7 @@
 /tmp
 
 .idea/*
+solr/test
 
 # Ignore all API keys
 /config/cloudinary.yml
@@ -25,3 +26,11 @@
 
 # Ignore application configuration
 /config/application.yml
+
+#solr
+solr/test/data
+solr/development/data
+solr/default/data
+solr/pids
+*.lck
+
