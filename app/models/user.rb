@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 	  def send_invitation
 	  	invite_email = TransactionalMailer.new
 	  	trigger = 2
-	  	invite_email.user_mailer(2, 2)
+	  	invite_email.user_mailer(id, 2)
 	  end
 end
 

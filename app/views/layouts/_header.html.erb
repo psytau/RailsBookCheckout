@@ -34,6 +34,9 @@
                 <li style="font-weight: bold; padding-top:15px"><%= current_user.email %></li>
                 <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
                 <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+                <li>
+                    <a href="/invite">Invite</a>
+                </li>
               <% else %>
                 <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> </li>
                 <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>

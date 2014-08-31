@@ -1,0 +1,9 @@
+<%= form_tag do %>
+  <div class="field">
+  	<%= label_tag "Email" %>
+    <%= email_field_tag(:email, "Email") %>
+  </div>
+  <div class="actions">
+    <%= submit_tag("Invite") %>
+  </div>
+<% end %>

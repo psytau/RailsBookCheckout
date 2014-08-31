@@ -27,6 +27,15 @@
       <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
         <%= f.password_field :current_password, autocomplete: "off" %></div>
 
+      <div> <%= f.check_box(:rate_email) %>
+            <%= f.label(:rate_email, "Rating email notifications") %></div>
+
+      <div> <%= f.check_box(:review_email) %>
+            <%= f.label(:review_email, "Review email notifications") %></div>
+
+      <div> <%= f.check_box(:daily_summary) %>
+            <%= f.label(:daily_summary, "Recieve a daily summary email") %></div>
+
       <div><%= f.submit "Update" %></div>
     <% end %>
 
