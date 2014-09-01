@@ -24,6 +24,8 @@ solr/test
 # Ignore Simple Cov reports
 /coverage
 
+application.yml
+
 #solr
 solr/test/data
 solr/development/data
