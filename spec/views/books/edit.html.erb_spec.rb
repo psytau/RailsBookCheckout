@@ -27,13 +27,7 @@ RSpec.describe "books/edit", :type => :view do
 
       assert_select "input#book_title[name=?]", "book[title]"
 
-      assert_select "input#book_status[name=?]", "book[status]"
-
       assert_select "input#book_isbn[name=?]", "book[isbn]"
-
-      assert_select "input#book_rating[name=?]", "book[rating]"
-
-      assert_select "input#book_active[name=?]", "book[active]"
     end
   end
 end
