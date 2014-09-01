@@ -2,7 +2,7 @@ class Book < ActiveRecord::Base
   include PublicActivity::Model
   tracked owner: ->(controller, model) { controller.current_user if (!!controller && !controller.admin_user) }
   searchable do
-    text :author, :title, :isbn, :tags, :rating, :review
+      text :author, :title, :isbn, :tags, :rating, :review
   end
   validates :author, :title, presence: true
   has_many :reservations
@@ -26,7 +26,7 @@ class Book < ActiveRecord::Base
   end
 
   def rating
-    count = ratings.count  # count ratings for this book
+    count = ratings.where("score != 0").count # count ratings for this book
     if count > 0
       sum_of_ratings = ratings.where("score != 0").sum("score")
       return sum_of_ratings/count

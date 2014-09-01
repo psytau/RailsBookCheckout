@@ -15,14 +15,15 @@
 /log/*.log
 /tmp
 
+.idea
 .idea/*
-solr/test
 
 # Ignore all API keys
 /config/cloudinary.yml
 
 # Ignore Simple Cov reports
 /coverage
+
 
 # Ignore application configuration
 /config/application.yml
@@ -33,4 +34,16 @@ solr/development/data
 solr/default/data
 solr/pids
 *.lck
+
+
+# figaro
+/config/application.yml
+
+#solr
+/solr/test/data
+/solr/development/data
+/solr/default/data
+/solr/pids
+sunspot-solr-*.pid
+/log/*.log.lck
 

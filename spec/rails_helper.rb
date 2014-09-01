@@ -24,6 +24,7 @@ RSpec.configure do |config|
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include Capybara::DSL
   config.include Devise::TestHelpers, type: :controller
+  config.include Devise::TestHelpers, type: :view
   config.include FactoryGirl::Syntax::Methods
 
   FactoryGirl.lint

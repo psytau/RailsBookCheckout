@@ -54,8 +54,8 @@
               <% if user_signed_in? %>
                 <li style="padding-top:15px; padding-right:10px"><%= form_tag books_path, :method => :get do %>
 
-                      <%= text_field_tag :q, params[:q] %>
-                      <%= submit_tag "Search", :name => nil %>
+                      <%= text_field_tag :q, params[:q], class: "search_input" %>
+                      <%= submit_tag "Search", :name => nil, class: "search_button" %>
 
                   <% end %></li>
                 <li style="font-weight: bold; padding-top:15px"><%= current_user.email %></li>

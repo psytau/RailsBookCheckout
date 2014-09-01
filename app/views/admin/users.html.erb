@@ -17,10 +17,10 @@
       <%= render 'make_can_do_checkbox', user: u, can_do_it: u.is_admin?, it: :admin %>
     </td>
     <td>
-      <%= render 'make_can_do_checkbox', user: u, can_do_it: true, it: :review %>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: !u.banned_from_reviewing, it: :review %>
     </td>
     <td>
-      <%= render 'make_can_do_checkbox', user: u, can_do_it: true, it: :rate %>
+      <%= render 'make_can_do_checkbox', user: u, can_do_it: !u.banned_from_rating, it: :rate %>
     </td>
     <td>
       <a href='/admin/view_as_user/<%= u.id %>'> become user </a>

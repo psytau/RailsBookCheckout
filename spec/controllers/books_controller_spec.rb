@@ -123,6 +123,8 @@ RSpec.describe BooksController, :type => :controller do
 
       it "updates the requested book" do
         book = Book.create! valid_attributes
+        book.user = @user
+        book.save!
         put :update, {:id => book.to_param, :book => new_attributes} #, valid_session
         book.reload
         skip("Add assertions for updated state")
@@ -130,12 +132,16 @@ RSpec.describe BooksController, :type => :controller do
 
       it "assigns the requested book as @book" do
         book = Book.create! valid_attributes
+        book.user = @user
+        book.save!
         put :update, {:id => book.to_param, :book => valid_attributes} #, valid_session
         expect(assigns(:book)).to eq(book)
       end
 
       it "redirects to the book" do
         book = Book.create! valid_attributes
+        book.user = @user
+        book.save!
         put :update, {:id => book.to_param, :book => valid_attributes} #, valid_session
         expect(response).to redirect_to(book)
       end
@@ -144,12 +150,16 @@ RSpec.describe BooksController, :type => :controller do
     describe "with invalid params" do
       it "assigns the book as @book" do
         book = Book.create! valid_attributes
+        book.user = @user
+        book.save!
         put :update, {:id => book.to_param, :book => invalid_attributes} #, valid_session
         expect(assigns(:book)).to eq(book)
       end
 
       it "re-renders the 'edit' template" do
         book = create_book_with_user @user, valid_attributes
+        book.user = @user
+        book.save!
         put :update, {:id => book.to_param, :book => invalid_attributes} #, valid_session
         expect(response).to render_template("edit")
       end
