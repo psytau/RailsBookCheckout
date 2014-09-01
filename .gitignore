@@ -32,4 +32,5 @@
 /solr/development/data
 /solr/default/data
 /solr/pids
-/log/sunspot-solr-test.log.lck
+sunspot-solr-test.log.lck
+sunspot-solr-test.pid
