@@ -56,3 +56,23 @@ Book.create!( author: 'Stephen Baxter',
 Rating.create!(user: normie,
                book: book,
                score: 3)
+
+#Trigger Events
+event_1 = trigger_events.create!( subject: 'You have been Invited!',
+                                  text: 'Hello!
+
+                                        Someone thought you would enjoy Rails Book Checkout! 
+                                        Please, check us out at http://railsbookcheckout.herokuapp.com')
+
+event_2 = trigger_events.create!( subject: 'A book has been reviewed!',
+                                  text: 'Log into Rails Book Checkout to see which book has been reviewed!')
+
+event_3 = trigger_events.create!( subject: 'A book has been rated!',
+                                  text: 'Log into Rails Book Checkout to see which book has been rated!')
+
+event_4 = trigger_events.create!( subject: 'You have been invited as an admin',
+                                  text: 'Hello!
+
+                                          You have been invited to join Rail book Checkout as an admin. 
+                                          Please go to http://railsbookcheckout.herokuapp.com.')
+

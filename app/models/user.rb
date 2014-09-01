@@ -8,6 +8,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+	after_create :send_invitation
+	  
+	  def send_invitation
+	  	invite_email = TransactionalMailer.new
+	  	trigger = 2
+	  	invite_email.user_mailer(id, 2)
+	  end
 
   # stats for users
   def total_logins
@@ -33,3 +40,4 @@ class User < ActiveRecord::Base
   end
 
 end
+
