@@ -21,6 +21,12 @@
 </p>
 
 <p>
+  <% @book.photos.each do |photo| %>
+      <%= cl_image_tag(photo.path, { size: '125x125', crop: :fit }) %>
+  <% end %>
+</p>
+
+<p>
   <strong>Rating:</strong>
   <div id="star"></div>
 

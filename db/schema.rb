@@ -11,9 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140827023837) do
-=======
 ActiveRecord::Schema.define(version: 20140830012923) do
 
   create_table "activities", force: true do |t|
@@ -32,7 +29,6 @@ ActiveRecord::Schema.define(version: 20140830012923) do
   add_index "activities", ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type"
   add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
->>>>>>> 15b393b74ec625c11c596a5dc9d9454bef2b4128
 
   create_table "attachinary_files", force: true do |t|
     t.integer  "attachinariable_id"
@@ -67,14 +63,12 @@ ActiveRecord::Schema.define(version: 20140830012923) do
     t.string   "status"
     t.string   "isbn"
     t.integer  "rating"
-    t.string   "tags"
-    t.string   "review"
     t.boolean  "active"
     t.datetime "approved_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "follower_id"
     t.integer  "user_id"
+    t.integer  "follower_id"
   end
 
   add_index "books", ["follower_id"], name: "index_books_on_follower_id"
@@ -142,18 +136,15 @@ ActiveRecord::Schema.define(version: 20140830012923) do
     t.string   "state"
     t.string   "phone"
     t.boolean  "admin"
-<<<<<<< HEAD
     t.boolean  "rate_email",             default: true
     t.boolean  "review_email",           default: true
     t.boolean  "daily_summary",          default: false
     t.integer  "rate_email_summary",     default: 0
     t.integer  "review_email_summary",   default: 0
-=======
-    t.integer  "follower_id"
     t.boolean  "banned_from_reviewing"
     t.boolean  "banned_from_rating"
+    t.integer  "follower_id"
     t.integer  "sign_in_counter"
->>>>>>> 15b393b74ec625c11c596a5dc9d9454bef2b4128
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
