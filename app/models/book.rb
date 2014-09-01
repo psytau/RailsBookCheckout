@@ -26,7 +26,7 @@ class Book < ActiveRecord::Base
   end
 
   def rating
-    count = ratings.count  # count ratings for this book
+    count = ratings.where("score != 0").count # count ratings for this book
     if count > 0
       sum_of_ratings = ratings.where("score != 0").sum("score")
       return sum_of_ratings/count
