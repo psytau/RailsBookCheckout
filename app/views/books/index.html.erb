@@ -32,26 +32,6 @@
           <% end %>
         </td>
         <td>
-          <%= link_to 'Edit', edit_book_path(book), class:  "btn btn-sm btn-primary"%>
-          <% if user_signed_in? %>
-
-              <% if book.followed?(current_user) %>
-                    <%= button_to "UnFollow", follower_path(get_follower(current_user, book).id), method: :delete, class: "btn btn-sm btn-danger" %>
-              <% else %>
-                    <%= link_to "Follow", new_follower_path(book_id: book.id), class:  "btn btn-sm btn-success" %>
-              <% end %>
-              <% if book.deleteable %>
-                  <%= button_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %>
-              <% else %>
-                <% if can? :admin, :site%>
-                  <% if book.active? %>
-                        <%= link_to "Deactivate", {controller: "books", action: "toggle_activation", id: book.id}, class: "btn btn-sm btn-danger" %>
-                  <% else %>
-                        <%= link_to "Activate", {controller: "books", action: "toggle_activation", id: book.id}, class: "btn btn-sm btn-success" %>
-                  <% end %>
-                <% end %>
-              <% end %>
-          <% end %>
         </td>
       </tr>
       <script>
