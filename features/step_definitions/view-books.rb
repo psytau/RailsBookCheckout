@@ -54,9 +54,9 @@ end
 
 When(/^TestAdmin visits the approve books page and approves the book$/) do
   book = Book.last
-  visit "/books/#{book.id}/edit"
-  check 'Active'
-  click_button 'Update Book'
+  visit "/books/#{book.id}"
+  click_link 'Activate'
+  # click_button 'Update Book'
 end
 
 Then(/^The book is now approved$/) do
