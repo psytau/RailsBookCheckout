@@ -36,8 +36,12 @@ class Book < ActiveRecord::Base
   end
 
   def deleteable
-    true
-    if (self.book_reviews.length + self.ratings.length) > 0
+    # a book is deleteable if it has no reviews, and no one has rated it
+    # Since we create a rating with 0 for users who view a page, even if
+    # that user has not rated, we need to exclude 0 ratings.
+    if book_reviews.count == 0 && ( ratings.where('score != 0').count == 0 )
+      true
+    else
       false
     end
   end
