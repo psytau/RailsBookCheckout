@@ -15,7 +15,6 @@ When /^(\w+) adds a book on the add book page$/ do |user|
   fill_in "Author", :with => 'Judy Bloom'
   fill_in "Title", :with => 'Blubber'
   fill_in "Isbn", :with => '123456789'
-  fill_in "Rating", :with => '4'
   click_button "Create Book"
 end
 
