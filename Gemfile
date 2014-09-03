@@ -27,7 +27,6 @@ group :development, :test do
   gem 'thin'
   gem 'jazz_hands'
   gem 'selenium-webdriver'
-
 end
 group :production do
   gem 'pg', '~> 0.17.1'
@@ -38,6 +37,7 @@ group :test do
   gem 'capybara'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem "codeclimate-test-reporter", group: :test, require: nil
 end
 gem 'jquery-rails'
 gem 'turbolinks'
