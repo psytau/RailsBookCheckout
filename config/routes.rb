@@ -28,7 +28,6 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
   namespace :me do
-    # get 'invite' # Me#invite:w
     resource :invite, only: [:new, :create]
   end
 
