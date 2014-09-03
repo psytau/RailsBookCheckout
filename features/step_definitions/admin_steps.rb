@@ -30,19 +30,14 @@ Given(/^A database populated with users and books$/) do
   populate_books users
 end
 
+# Ratings
+
 Given(/^TestAdmin bans (\d+) users from rating$/) do |arg1|
   sign_in_as_admin
   visit '/admin/users'
   (0..arg1.to_i).each do |n|
     user = @users[n]
-    # find the checkbox
-    checkbox = page.find("#user-row-#{user.id} input.rate")
-    # make sure its checked
-    expect(checkbox).to be_checked
-    # uncheck it
-    checkbox.set(false)
-    # make sure it is not checked
-    expect(checkbox).not_to be_checked
+    check_can_do_box_for user, 'rate', false
   end
 end
 
@@ -62,14 +57,7 @@ Then(/^TestAdmin allows the (\d+) users to rate again$/) do |arg1|
   visit '/admin/users'
   (0..arg1.to_i).each do |n|
     user = @users[n]
-    # find the checkbox
-    checkbox = page.find("#user-row-#{user.id} input.rate")
-    # make sure its checked
-    expect(checkbox).not_to be_checked
-    # uncheck it
-    checkbox.set(true)
-    # make sure it is not checked
-    expect(checkbox).to be_checked
+    check_can_do_box_for user, 'rate', true
   end
 end
 
@@ -86,4 +74,38 @@ end
 Then(/^The rating for the book is (\d+)$/) do |arg1|
   visit book_path @approved_books[0]
   expect(page.find("#star #score_input", :visible => false).value).to eq("5")
+end
+
+# ban reviewing
+Given(/^TestAdmin bans (\d+) users from reviewing books$/) do |arg1|
+  sign_in_as_admin
+  visit '/admin/users'
+  (0..arg1.to_i).each do |n|
+    user = @users[n]
+    check_can_do_box_for user, 'review', false
+  end
+end
+
+Then(/^The (\d+) users cannot review books$/) do |arg1|
+  (0..arg1.to_i).each do |n|
+    user = User.find @users[n].id
+    expect(user.banned_from_reviewing).to eq(true)
+  end
+end
+
+# make admins
+Given(/^Test admin makes (\d+) users into admins$/) do |arg1|
+  sign_in_as_admin
+  visit '/admin/users'
+  (0..arg1.to_i).each do |n|
+    user = @users[n]
+    check_can_do_box_for user, 'admin', true
+  end
+end
+
+Then(/^Those (\d+) users are admins$/) do |arg1|
+  (0..arg1.to_i).each do |n|
+    user = User.find @users[n].id
+    expect(user.is_admin?).to eq(true)
+  end
 end

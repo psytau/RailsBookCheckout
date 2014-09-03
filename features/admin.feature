@@ -7,11 +7,23 @@ Feature: Admin Site
     And TestAdmin is logged in
     And TestAdmin bans 2 users from rating
     Then The 2 users cannot rate books
-    #And The 2 users try to rate a book as 5
-    #Then The rating for the book has not changed
     But TestAdmin allows the 2 users to rate again
     And The 2 users try to rate a book 5
     Then The rating for the book is 5
+
+  @javascript
+  Scenario: Prevent a user from reviewing books.
+    Given A database populated with users and books
+    And TestAdmin is logged in
+    And TestAdmin bans 2 users from reviewing books
+    Then The 2 users cannot review books
+
+  @javascript
+  Scenario: Make a user an admin
+    Given A database populated with users
+    And TestAdmin is logged in
+    And Test admin makes 2 users into admins
+    Then Those 2 users are admins
 
   Scenario: View Users Stats
     Given A database populated with users
