@@ -7,6 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Admin
+#
+User.delete_all
+Book.delete_all
 admin = User.create!( firstname: 'Admin',
               lastname: 'Admin',
               email: 'a@a.com',
@@ -53,6 +56,25 @@ Book.create!( author: 'Stephen Baxter',
               user: normie
 )
 
-Rating.create!(user: normie,
-               book: book,
-               score: 3)
+users = []
+  ('A'..'Z').each do |last_name|
+    users << User.create!(
+      :email => "#{last_name}@railsbookcheckout.com",
+      :firstname => 'Erica',
+      :lastname => last_name,
+      :password => 'p455w0rd'
+    )
+  end
+  @all_books = []
+  users.each do |user|
+    users_name = "#{user.firstname} #{user.lastname}"
+    (1..10).each do |n|
+      @all_books << Book.create!( user: user,
+                                              :author => user.email,
+                                              :title => "The Autobiography of #{users_name} Vol. #{n}",
+                                              :isbn => "9999#{n}",
+                                              :active => (n<6),
+                                              :approved_at => (n<6) ? Time.now : nil
+                                             )
+    end
+  end

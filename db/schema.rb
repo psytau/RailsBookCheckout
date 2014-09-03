@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 20140830012923) do
     t.datetime "approved_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "follower_id"
     t.integer  "user_id"
+    t.integer  "follower_id"
   end
 
   add_index "books", ["follower_id"], name: "index_books_on_follower_id"
@@ -131,9 +131,9 @@ ActiveRecord::Schema.define(version: 20140830012923) do
     t.string   "state"
     t.string   "phone"
     t.boolean  "admin"
-    t.integer  "follower_id"
     t.boolean  "banned_from_reviewing"
     t.boolean  "banned_from_rating"
+    t.integer  "follower_id"
     t.integer  "sign_in_counter"
   end
 
