@@ -34,3 +34,5 @@ Please feel free to use a different markup language if you do not plan to run
 {<img src="https://codeclimate.com/github/psytau/RailsBookCheckout/badges/gpa.svg" />}[https://codeclimate.com/github/psytau/RailsBookCheckout]
 {<img src="https://codeclimate.com/github/psytau/RailsBookCheckout/badges/coverage.svg" />}[https://codeclimate.com/github/psytau/RailsBookCheckout]
 
+*Note:* CodeClimate coverage does not incude javascript tests. A more complete report can be found here: {http://railsbookcheckout.herokuapp.com/coverage/index.html#_AllFiles}[http://railsbookcheckout.herokuapp.com/coverage/index.html#_AllFiles]
+
