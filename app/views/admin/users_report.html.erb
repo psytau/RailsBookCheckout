@@ -8,12 +8,12 @@
     <td>number of books entered</td>
   </tr>
   <% @users.each do |user| %>
-    <tr>
+    <tr id="user-row-<%= user.id %>">
       <td><%= user.email %></td>
       <td><%= user.total_logins %></td>
       <td><%= user.ratings_ave %></td>
       <td><%= user.book_reviews_count %></td>
-      <td><%= user.books_count %></td>
+      <td class="book-count"><%= user.books_count %></td>
     </tr>
   <% end %>
 </table>

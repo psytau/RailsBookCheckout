@@ -45,19 +45,20 @@ class BookReviewsController < ApplicationController
     end
   end
 
+  # We don't allow users to update reviews as of yet.
   # PATCH/PUT /book_reviews/1
   # PATCH/PUT /book_reviews/1.json
-  def update
-    respond_to do |format|
-      if @book_review.update(book_review_params)
-        format.html { redirect_to @book_review, notice: 'Book review was successfully updated.' }
-        format.json { render :show, status: :ok, location: @book_review }
-      else
-        format.html { render :edit }
-        format.json { render json: @book_review.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def update
+  #   respond_to do |format|
+  #     if @book_review.update(book_review_params)
+  #       format.html { redirect_to @book_review, notice: 'Book review was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @book_review }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @book_review.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /book_reviews/1
   # DELETE /book_reviews/1.json
