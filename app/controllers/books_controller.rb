@@ -99,14 +99,11 @@ class BooksController < ApplicationController
       if can? :update, @book
         if @book.update(book_params)
           format.html { redirect_to @book, notice: 'Book was successfully updated.' }
-          format.json { render :show, status: :ok, location: @book }
         else
           format.html { render :edit }
-          format.json { render json: @book.errors, status: :unprocessable_entity }
         end
       else
         format.html {redirect_to @book, notice: 'You cannot edit this book.'}
-        format.json { render json: 'permission denied', status: :unauthorize }
       end
     end
   end
