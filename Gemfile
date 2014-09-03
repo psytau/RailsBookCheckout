@@ -23,6 +23,7 @@ group :development, :test do
   gem 'launchy'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'cucumber-slices'
   gem 'thin'
   gem 'jazz_hands'
   gem 'selenium-webdriver'

@@ -1,4 +1,4 @@
-And(/^And 2 books exist in the system$/) do
+And(/^2 books exist in the system$/) do
   @book1 = Book.create!(author: "A guy", title: "A book", approved_at: Time.now)
   @book2 = Book.create!(author: "Zedd", title: "Another book", approved_at: Time.now)
 end
