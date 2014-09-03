@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'admin/view_as_user/:view_as_user', to: 'admin#view_as_user'
   get 'admin/view_as_self', to: 'admin#view_as_self'
 
+
   resources :book_reviews
 
   devise_for :users
@@ -25,4 +26,11 @@ Rails.application.routes.draw do
   resources :followers
 
   mount Attachinary::Engine => "/attachinary"
+
+  namespace :me do
+    # get 'invite' # Me#invite:w
+    resource :invite, only: [:new, :create]
+  end
+
+
 end

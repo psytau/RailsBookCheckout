@@ -38,4 +38,6 @@ Rails.application.configure do
   # Default URL for development required for Devise
   # In production, :host should be set to actual host of application
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :letter_opener
+  ActionMailer::Base.default :from => 'no-reply@localhost.com'
 end

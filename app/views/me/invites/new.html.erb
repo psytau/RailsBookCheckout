@@ -1,0 +1,7 @@
+<%= form_for(:invite, url: me_invite_path, method: :post) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
+<% end %>
