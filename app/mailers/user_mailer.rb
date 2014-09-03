@@ -7,7 +7,7 @@ class UserMailer < ActionMailer::Base
 
   def invite email, from_id, is_admin=false
     from_user = User.find from_id
-    invite_location = 'http://localhost:3000/users/sign_up'
+    invite_location = 'http://railsbookcheckout.herokuapp.com/users/sign_up'
     mail(to:email, subject: "#{from_user.firstname} has invited you to use RailsBookCheckout")
   end
 end
