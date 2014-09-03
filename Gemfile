@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+#ruby '2.1.1'
 
 
 gem 'rails', '4.1.4'
@@ -27,6 +27,8 @@ group :development, :test do
   gem 'thin'
   gem 'jazz_hands'
   gem 'selenium-webdriver'
+  gem 'letter_opener'
+  gem 'powder'
 end
 group :production do
   gem 'pg', '~> 0.17.1'
