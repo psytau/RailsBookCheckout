@@ -19,6 +19,5 @@ toggle_can_do_it = () ->
       $(checkbox).prop('checked', originalVal)
       $(checkbox).prop('disabled', false)
 
-$( () ->
+$(document).on "page:change", ->
   $('.can-do-it').change(toggle_can_do_it)
-)

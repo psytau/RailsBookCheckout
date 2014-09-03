@@ -44,4 +44,5 @@ def populate_users
       :password => 'p455w0rd'
     )
   end
+  @users
 end

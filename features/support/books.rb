@@ -24,12 +24,12 @@ def create_and_approve_book_for user, opts = {}
   approve_book create_book_for(user)
 end
 
-def populate_books users
+def populate_books users, number_of_books = 5
   @approved_books = []
   users.each do |user|
     users_name = "#{user.firstname} #{user.lastname}"
-    1..5.each do |n|
-      @all_books << create_and_approve_book_for(user,
+    (1..number_of_books).each do |n|
+      @approved_books << create_and_approve_book_for(user,
                                                 :isbn => "9999#{n}",
                                                 :author => users_name,
                                                 :title => "The Autobiography of #{users_name} Vol. #{n}")

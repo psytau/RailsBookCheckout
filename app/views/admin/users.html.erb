@@ -9,7 +9,7 @@
     </tr>
   </thead>
 <% @users.each do |u| %>
-  <tr>
+  <tr id="user-row-<%= u.id %>">
     <td>
       <%= u.email %>
     </td>
