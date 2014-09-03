@@ -73,6 +73,7 @@ users = []
                                               :author => user.email,
                                               :title => "The Autobiography of #{users_name} Vol. #{n}",
                                               :isbn => "9999#{n}",
+                                              # only activate some of them
                                               :active => (n<6),
                                               :approved_at => (n<6) ? Time.now : nil
                                              )
