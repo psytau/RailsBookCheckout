@@ -21,6 +21,7 @@ admin = User.create!( firstname: 'Admin',
               password: '12345678',
               password_confirmation: '12345678'
 )
+admin.confirm!
 
 admin.add_role "admin"
 
@@ -36,6 +37,7 @@ normie = User.create!( firstname: 'Tom',
               password: '12345678',
               password_confirmation: '12345678'
 )
+normie.confirm!
 
 book = Book.create!( author: 'Steven King',
               title: 'IT',
@@ -58,12 +60,14 @@ Book.create!( author: 'Stephen Baxter',
 
 users = []
   ('A'..'Z').each do |last_name|
-    users << User.create!(
+    user = User.create!(
       :email => "#{last_name}@railsbookcheckout.com",
       :firstname => 'Erica',
       :lastname => last_name,
       :password => 'p455w0rd'
     )
+    user.confirm!
+    users << user
   end
   @all_books = []
   users.each do |user|
