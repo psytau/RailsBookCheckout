@@ -27,17 +27,16 @@ class Book < ActiveRecord::Base
   end
 
   def rating
-    if @rating_val
-      @rating_val
-    else
+    if ! @rating_val
       count = ratings.where("score != 0").count # count ratings for this book
       if count > 0
         sum_of_ratings = ratings.where("score != 0").sum("score")
-        return @rating_val = sum_of_ratings/count
+        @rating_val = sum_of_ratings/count
       else
-        return @rating_val = 0
+        @rating_val = 0
       end
     end
+    @rating_val
   end
 
   def deleteable
