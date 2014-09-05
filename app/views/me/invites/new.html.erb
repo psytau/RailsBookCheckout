@@ -7,6 +7,11 @@
       <%= f.label :email %>
       <%= f.text_field :email %>
       <%= f.submit 'Send!', class: 'btn'%>
+      <% if can? :admin, :site %>
+        <%= f.label :can_admin, 'Invite as admin!' %>
+        <%= f.check_box :can_admin %>
+      <% end %>
+      <br>
     </div>
   <% end %>
 </div>
