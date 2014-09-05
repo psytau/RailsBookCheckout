@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <h1>Listing books</h1>
 
-<table style="width:100%">
+<table class='table' style="width:100%">
   <thead>
     <tr>
       <th><%= link_to "Author", books_path(:column => "author", :order => search_sort_by[:order]), :class => "author_link" %></th>
@@ -17,7 +17,11 @@
 
   <tbody>
     <% @books.each do |book| %>
-      <tr>
+      <% if book.active %>
+        <tr>
+      <% else %>
+        <tr class="warning">
+      <% end %>
         <td id="<%= book.id %>" class="author"><%= book.author %></td>
         <td id="<%= book.id %>" class="title"><%= link_to book.title, book %></td>
         <td id="<%= book.id %>" class="status"><%= book.status %></td>

@@ -8,8 +8,15 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
+    if current_user && cannot?(:admin, :site)
+      query = Book.active_or_mine(current_user.id)
+    elsif current_user && can?(:admin, :site)
+      query = Book.all
+    else
+      query = Book.active_books
+    end
     if params[:q]
-      results = Book.search do
+      results = query.search do
         fulltext params[:q] do
           boost_fields :isbn => 5.0
           boost_fields :author => 3.0
@@ -28,15 +35,15 @@ class BooksController < ApplicationController
 
         if params[:column] == "rating"
           if params[:order] == "asc"
-            @books = Book.sorted_by_rating
+            @books = query.sorted_by_rating
           else
-            @books = Book.sorted_by_rating.reverse
+            @books = query.sorted_by_rating.reverse
           end
         else
-          @books = Book.order("#{sort_params[:column]} #{sort_params[:order]}")
+          @books = query.order("#{sort_params[:column]} #{sort_params[:order]}")
         end
       else
-        @books = Book.sorted_by_rating.reverse
+        @books = query.to_a.sort {|a,b| a.rating <=> b.rating}.reverse
       end
       # this was breaking tests
       # if cannot? :toggle_activation, @book
