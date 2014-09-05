@@ -1,10 +1,11 @@
 
 Given(/^A book exists in the system$/) do
-  Book.find_or_create_by(author: "Stupid Guy", title: "Some book", approved_at: Time.now)
+  #Book.find_or_create_by(author: "Stupid Guy", title: "Some book", approved_at: Time.now)
+  @book = FactoryGirl.create :book
 end
 
 Given(/^TestUser visits the show book page$/) do
-  visit book_path(Book.first)
+  visit book_path(@book)
 end
 
 Given(/^TestUser visits the book index page$/) do

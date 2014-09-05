@@ -24,10 +24,7 @@ RSpec.describe BooksController, :type => :controller do
   # Book. As you add validations to Book, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    {
-      author: 'Judy Bloom',
-      title: 'Blubber'
-    }
+      FactoryGirl.attributes_for :book
   }
 
   let(:invalid_attributes) {

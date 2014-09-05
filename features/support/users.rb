@@ -36,13 +36,16 @@ end
 
 def populate_users
   @users = []
-  ('A'..'Z').each do |last_name|
-    @users << User.create!(
-      :email => "#{last_name}@railsbookcheckout.com",
-      :firstname => 'Erica',
-      :lastname => last_name,
-      :password => 'p455w0rd'
-    )
+  10.times do
+    @users << FactoryGirl.create(:user)
   end
+  # ('A'..'Z').each do |last_name|
+  #   @users << User.create!(
+  #     :email => "#{last_name}@railsbookcheckout.com",
+  #     :firstname => 'Erica',
+  #     :lastname => last_name,
+  #     :password => 'p455w0rd'
+  #   )
+  # end
   @users
 end

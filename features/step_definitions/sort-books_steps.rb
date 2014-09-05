@@ -1,6 +1,6 @@
 And(/^2 books exist in the system$/) do
-  @book1 = Book.create!(author: "A guy", title: "A book", approved_at: Time.now)
-  @book2 = Book.create!(author: "Zedd", title: "Another book", approved_at: Time.now)
+  @book1 = Book.create!(author: "A guy", title: "A book", approved_at: Time.now, active: true)
+  @book2 = Book.create!(author: "Zedd", title: "Another book", approved_at: Time.now, active: true)
 end
 
 When(/^User clicks the title sort button$/) do
