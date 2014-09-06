@@ -1,21 +1,12 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   load_and_authorize_resource
-  helper_method :get_follower
+  helper_method :get_follower, :do_search, :do_sort
 
   include SortHelper
 
-  # GET /books
-  # GET /books.json
-  def index
-    if current_user && cannot?(:admin, :site)
-      query = Book.active_or_mine(current_user.id)
-    elsif current_user && can?(:admin, :site)
-      query = Book.all
-    else
-      query = Book.active_books
-    end
-    if params[:q]
+
+  def do_search query
       results = query.search do
         fulltext params[:q] do
           boost_fields :isbn => 5.0
@@ -28,27 +19,37 @@ class BooksController < ApplicationController
           order_by(sort_params[:column], sort_params[:order])
         end
       end
-      @books = results.results
-    else
-      if params[:column]
-        sort_params = search_sort_by
+      return results
+  end
 
-        if params[:column] == "rating"
-          if params[:order] == "asc"
-            @books = query.sorted_by_rating
-          else
-            @books = query.sorted_by_rating.reverse
-          end
-        else
-          @books = query.order("#{sort_params[:column]} #{sort_params[:order]}")
-        end
+  def do_sort query
+    sort_params = search_sort_by
+    if params[:column] == "rating"
+      if params[:order] == "asc"
+        @books = query.sorted_by_rating
       else
-        @books = query.to_a.sort {|a,b| a.rating <=> b.rating}.reverse
+        @books = query.sorted_by_rating.reverse
       end
-      # this was breaking tests
-      # if cannot? :toggle_activation, @book
-      #   @books.reject! {|book| !book.approved}
-      # end
+    else
+      @books = query.order("#{sort_params[:column]} #{sort_params[:order]}")
+    end
+  end
+
+  # GET /books
+  # GET /books.json
+  def index
+    if current_user
+      query = can?(:admin, :site) ? Book.all : Book.active_or_mine(current_user.id)
+    else
+      query = Book.active_books
+    end
+    if params[:q]
+      results = do_search query
+      @books = results.results
+    elsif params[:column]
+      do_sort query
+    else
+      @books = query.to_a.sort {|a,b| a.rating <=> b.rating}.reverse
     end
     @user = current_user
   end
