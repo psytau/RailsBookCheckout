@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-04T03:40:01+08:00">2014-09-04T03:40:01+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-09-06T13:32:15+08:00">2014-09-06T13:32:15+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.0%</span></span>
+    (<span class="covered_percent"><span class="yellow">86.23%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         36.37
+         22.58
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>34</b> files in total.
-    <b>350</b> relevant lines. 
-    <span class="green"><b>301</b> lines covered</span> and
-    <span class="red"><b>49</b> lines missed </span>
+    <b>363</b> relevant lines. 
+    <span class="green"><b>313</b> lines covered</span> and
+    <span class="red"><b>50</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#9e6d773161c757fecb8fad0854b7200e402427af" class="src_link" title="app/controllers/admin_controller.rb">app/controllers/admin_controller.rb</a></td>
-        <td class="yellow strong">82.93 %</td>
-        <td>70</td>
-        <td>41</td>
-        <td>34</td>
+        <td class="yellow strong">83.33 %</td>
+        <td>71</td>
+        <td>42</td>
+        <td>35</td>
         <td>7</td>
-        <td>4.0</td>
+        <td>4.2</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>20</td>
         <td>16</td>
         <td>4</td>
-        <td>292.4</td>
+        <td>170.0</td>
       </tr>
       
       <tr>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#ddfe7326433c23289e7ee6f5170f8d52d60ac6ff" class="src_link" title="app/controllers/books_controller.rb">app/controllers/books_controller.rb</a></td>
-        <td class="yellow strong">81.58 %</td>
-        <td>156</td>
-        <td>76</td>
-        <td>62</td>
+        <td class="yellow strong">83.13 %</td>
+        <td>164</td>
+        <td>83</td>
+        <td>69</td>
         <td>14</td>
-        <td>8.8</td>
+        <td>8.3</td>
       </tr>
       
       <tr>
@@ -167,7 +167,7 @@
         <td>9</td>
         <td>5</td>
         <td>4</td>
-        <td>31.6</td>
+        <td>17.3</td>
       </tr>
       
       <tr>
@@ -182,12 +182,12 @@
       
       <tr>
         <td class="strong"><a href="#08202320a0b7edce359f48db2f2e91d918604da4" class="src_link" title="app/models/book.rb">app/models/book.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>53</td>
-        <td>30</td>
-        <td>30</td>
-        <td>0</td>
-        <td>124.4</td>
+        <td class="green strong">96.97 %</td>
+        <td>57</td>
+        <td>33</td>
+        <td>32</td>
+        <td>1</td>
+        <td>57.1</td>
       </tr>
       
       <tr>
@@ -233,11 +233,11 @@
       <tr>
         <td class="strong"><a href="#265414f35edf469af2dd5e9204efb67e3a212ff7" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>41</td>
+        <td>42</td>
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>15.7</td>
+        <td>8.1</td>
       </tr>
       
       <tr>
@@ -313,9 +313,9 @@
       <tr>
         <td class="strong"><a href="#9d7f14697f121d5a6cb755c04a580dec7c7b8b54" class="src_link" title="config/initializers/devise.rb">config/initializers/devise.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>256</td>
-        <td>11</td>
-        <td>11</td>
+        <td>295</td>
+        <td>13</td>
+        <td>13</td>
         <td>0</td>
         <td>2.0</td>
       </tr>
@@ -409,10 +409,10 @@
         <div class="source_table" id="9e6d773161c757fecb8fad0854b7200e402427af">
   <div class="header">
     <h3>app/controllers/admin_controller.rb</h3>
-    <h4><span class="yellow">82.93 %</span> covered</h4>
+    <h4><span class="yellow">83.33 %</span> covered</h4>
     <div>
-      <b>41</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>42</b> relevant lines. 
+      <span class="green"><b>35</b> lines covered</span> and
       <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
@@ -609,199 +609,199 @@
         <li class="covered" data-hits="12" data-linenumber="32">
           <span class="hits">12</span>
           
-          <code class="ruby">    user = User.find(params[:user])</code>
+          <code class="ruby">    possible_cans = [&#39;review&#39;, &#39;admin&#39;, &#39;rate&#39;]</code>
         </li>
       
         <li class="covered" data-hits="12" data-linenumber="33">
           <span class="hits">12</span>
           
-          <code class="ruby">    it = params[:it]</code>
+          <code class="ruby">    user = User.find(params[:user])</code>
         </li>
       
         <li class="covered" data-hits="12" data-linenumber="34">
           <span class="hits">12</span>
           
+          <code class="ruby">    it = params[:it]</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="35">
+          <span class="hits">12</span>
+          
           <code class="ruby">    if params[:can_do_it] == &#39;true&#39;</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="35">
+        <li class="covered" data-hits="6" data-linenumber="36">
           <span class="hits">6</span>
           
           <code class="ruby">      can_do_it = true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">    elsif params[:can_do_it] == &#39;false&#39;</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="37">
+        <li class="covered" data-hits="6" data-linenumber="38">
           <span class="hits">6</span>
           
           <code class="ruby">      can_do_it = false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
+        <li class="missed" data-hits="0" data-linenumber="40">
           
           
           <code class="ruby">      raise :bad_params</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="12" data-linenumber="41">
-          <span class="hits">12</span>
-          
-          <code class="ruby">    if [&#39;review&#39;, &#39;admin&#39;, &#39;rate&#39;].include? it</code>
         </li>
       
         <li class="covered" data-hits="12" data-linenumber="42">
           <span class="hits">12</span>
           
-          <code class="ruby">      send(:&quot;can_do_#{it}&quot;, user, can_do_it)</code>
+          <code class="ruby">    if i = possible_cans.index(it)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="covered" data-hits="12" data-linenumber="43">
+          <span class="hits">12</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      send(:&quot;can_do_#{possible_cans[i]}&quot;, user, can_do_it)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="47">
+        <li class="covered" data-hits="2" data-linenumber="48">
           <span class="hits">2</span>
           
           <code class="ruby">  def books</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="48">
+        <li class="missed" data-hits="0" data-linenumber="49">
           
           
           <code class="ruby">    @books = Book.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="51">
+        <li class="covered" data-hits="2" data-linenumber="52">
           <span class="hits">2</span>
           
           <code class="ruby">  def users_report</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
           <code class="ruby">    @users = User.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="55">
+        <li class="covered" data-hits="2" data-linenumber="56">
           <span class="hits">2</span>
           
           <code class="ruby">  def view_as_user</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
+        <li class="missed" data-hits="0" data-linenumber="57">
           
           
           <code class="ruby">    session[:view_as_user] = params[:view_as_user]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
+        <li class="missed" data-hits="0" data-linenumber="58">
           
           
           <code class="ruby">    redirect_to &#39;/books&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="60">
+        <li class="covered" data-hits="2" data-linenumber="61">
           <span class="hits">2</span>
           
           <code class="ruby">  def view_as_self</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="61">
+        <li class="missed" data-hits="0" data-linenumber="62">
           
           
           <code class="ruby">    session[:view_as_user] = nil</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
+        <li class="missed" data-hits="0" data-linenumber="63">
           
           
           <code class="ruby">    redirect_to &#39;/admin/users&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
@@ -810,31 +810,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="66">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="66">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="67">
           <span class="hits">2</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="68">
+          <span class="hits">2</span>
+          
           <code class="ruby">    def auth_admin!</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="68">
+        <li class="covered" data-hits="19" data-linenumber="69">
           <span class="hits">19</span>
           
           <code class="ruby">      authorize! :admin, :site</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="70">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="71">
           
           
           <code class="ruby">end</code>
@@ -996,8 +1002,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="1645" data-linenumber="24">
-          <span class="hits">1645</span>
+        <li class="covered" data-hits="989" data-linenumber="24">
+          <span class="hits">989</span>
           
           <code class="ruby">    if session[:view_as_user]</code>
         </li>
@@ -1020,8 +1026,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1645" data-linenumber="28">
-          <span class="hits">1645</span>
+        <li class="covered" data-hits="989" data-linenumber="28">
+          <span class="hits">989</span>
           
           <code class="ruby">      @current_user ||= warden.authenticate(scope: :user) # this is as it is in devise</code>
         </li>
@@ -1032,8 +1038,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1645" data-linenumber="30">
-          <span class="hits">1645</span>
+        <li class="covered" data-hits="989" data-linenumber="30">
+          <span class="hits">989</span>
           
           <code class="ruby">    @current_user</code>
         </li>
@@ -1056,8 +1062,8 @@
           <code class="ruby">  def admin_user</code>
         </li>
       
-        <li class="covered" data-hits="889" data-linenumber="34">
-          <span class="hits">889</span>
+        <li class="covered" data-hits="409" data-linenumber="34">
+          <span class="hits">409</span>
           
           <code class="ruby">    @admin_user</code>
         </li>
@@ -1597,10 +1603,10 @@
         <div class="source_table" id="ddfe7326433c23289e7ee6f5170f8d52d60ac6ff">
   <div class="header">
     <h3>app/controllers/books_controller.rb</h3>
-    <h4><span class="yellow">81.58 %</span> covered</h4>
+    <h4><span class="yellow">83.13 %</span> covered</h4>
     <div>
-      <b>76</b> relevant lines. 
-      <span class="green"><b>62</b> lines covered</span> and
+      <b>83</b> relevant lines. 
+      <span class="green"><b>69</b> lines covered</span> and
       <span class="red"><b>14</b> lines missed.</span>
     </div>
   </div>
@@ -1629,7 +1635,7 @@
         <li class="covered" data-hits="2" data-linenumber="4">
           <span class="hits">2</span>
           
-          <code class="ruby">  helper_method :get_follower</code>
+          <code class="ruby">  helper_method :get_follower, :do_search, :do_sort</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -1653,223 +1659,223 @@
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">  # GET /books</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  # GET /books.json</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="10">
+        <li class="covered" data-hits="2" data-linenumber="9">
           <span class="hits">2</span>
           
-          <code class="ruby">  def index</code>
+          <code class="ruby">  def do_search query</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="11">
-          <span class="hits">9</span>
-          
-          <code class="ruby">    if params[:q]</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      results = Book.search do</code>
+          <code class="ruby">      results = query.search do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">        fulltext params[:q] do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">          boost_fields :isbn =&gt; 5.0</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">          boost_fields :author =&gt; 3.0</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">          boost_fields :title =&gt; 3.0</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">          boost_fields :rating =&gt; 3.0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">        if params[:column]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="18">
           
           
           <code class="ruby">          sort_params = search_sort_by</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="19">
           
           
           <code class="ruby">          order_by(sort_params[:column], sort_params[:order])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      return results</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      @books = results.results</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="26">
-          <span class="hits">8</span>
-          
-          <code class="ruby">      if params[:column]</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="27">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        sort_params = search_sort_by</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="29">
+        <li class="covered" data-hits="2" data-linenumber="25">
           <span class="hits">2</span>
           
-          <code class="ruby">        if params[:column] == &quot;rating&quot;</code>
+          <code class="ruby">  def do_sort query</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
-          
-          <code class="ruby">          if params[:order] == &quot;asc&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
-          
-          <code class="ruby">            @books = Book.sorted_by_rating</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">          else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="33">
-          
-          
-          <code class="ruby">            @books = Book.sorted_by_rating.reverse</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">        else</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="36">
+        <li class="covered" data-hits="2" data-linenumber="26">
           <span class="hits">2</span>
           
-          <code class="ruby">          @books = Book.order(&quot;#{sort_params[:column]} #{sort_params[:order]}&quot;)</code>
+          <code class="ruby">    sort_params = search_sort_by</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">        end</code>
+          <code class="ruby">    if params[:column] == &quot;rating&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">      if params[:order] == &quot;asc&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">        @books = query.sorted_by_rating</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="39">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="31">
           
-          <code class="ruby">        @books = Book.sorted_by_rating.reverse</code>
+          
+          <code class="ruby">        @books = query.sorted_by_rating.reverse</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">      # this was breaking tests</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @books = query.order(&quot;#{sort_params[:column]} #{sort_params[:order]}&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">      # if cannot? :toggle_activation, @book</code>
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  # GET /books</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  # GET /books.json</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="40">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="41">
+          <span class="hits">9</span>
+          
+          <code class="ruby">    if current_user</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="42">
+          <span class="hits">8</span>
+          
+          <code class="ruby">      query = can?(:admin, :site) ? Book.all : Book.active_or_mine(current_user.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">      #   @books.reject! {|book| !book.approved}</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      # end</code>
+          <code class="ruby">      query = Book.active_books</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
@@ -1881,529 +1887,529 @@
         <li class="covered" data-hits="9" data-linenumber="46">
           <span class="hits">9</span>
           
-          <code class="ruby">    @user = current_user</code>
+          <code class="ruby">    if params[:q]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      results = do_search query</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      @books = results.results</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  # GET /books/1</code>
+          <code class="ruby">    elsif params[:column]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby">  # GET /books/1.json</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="51">
+        <li class="covered" data-hits="2" data-linenumber="50">
           <span class="hits">2</span>
           
-          <code class="ruby">  def show</code>
+          <code class="ruby">      do_sort query</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="52">
-          <span class="hits">37</span>
-          
-          <code class="ruby">    @book = Book.find(params[:id])</code>
-        </li>
-      
-        <li class="covered" data-hits="37" data-linenumber="53">
-          <span class="hits">37</span>
-          
-          <code class="ruby">    @book_review = BookReview.new book: @book</code>
-        </li>
-      
-        <li class="covered" data-hits="37" data-linenumber="54">
-          <span class="hits">37</span>
-          
-          <code class="ruby">    @book_reviews = @book.book_reviews</code>
-        </li>
-      
-        <li class="covered" data-hits="37" data-linenumber="55">
-          <span class="hits">37</span>
-          
-          <code class="ruby">    @user = current_user</code>
-        </li>
-      
-        <li class="covered" data-hits="37" data-linenumber="56">
-          <span class="hits">37</span>
-          
-          <code class="ruby">    if @user</code>
-        </li>
-      
-        <li class="covered" data-hits="37" data-linenumber="57">
-          <span class="hits">37</span>
-          
-          <code class="ruby">      @rating =</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">        if Rating.where(&quot;book_id = ? AND user_id = ?&quot;, @book.id, @user.id).empty?</code>
-        </li>
-      
-        <li class="covered" data-hits="33" data-linenumber="59">
-          <span class="hits">33</span>
-          
-          <code class="ruby">          Rating.create!(user: @user, book: @book)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="60">
-          
-          
-          <code class="ruby">        else</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="61">
-          <span class="hits">4</span>
-          
-          <code class="ruby">          Rating.where(&quot;book_id = ? AND user_id = ?&quot;, @book.id, @user.id).first</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="63">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="64">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
-          <code class="ruby">  # GET /books/new</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="67">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  def new</code>
-        </li>
-      
-        <li class="covered" data-hits="28" data-linenumber="68">
-          <span class="hits">28</span>
-          
-          <code class="ruby">    @book = Book.new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="69">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="71">
-          
-          
-          <code class="ruby">  # GET /books/1/edit</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="72">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  def edit</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="73">
-          
-          
-          <code class="ruby">    if cannot? :update, @book</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="74">
-          
-          
-          <code class="ruby">      redirect_to @book, notice: &#39;You cannot edit this book.&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="75">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="76">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="77">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="78">
-          
-          
-          <code class="ruby">  # POST /books</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="79">
-          
-          
-          <code class="ruby">  # POST /books.json</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="80">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  def create</code>
-        </li>
-      
-        <li class="covered" data-hits="30" data-linenumber="81">
-          <span class="hits">30</span>
-          
-          <code class="ruby">    @book = Book.new(book_params)</code>
-        </li>
-      
-        <li class="covered" data-hits="30" data-linenumber="82">
-          <span class="hits">30</span>
-          
-          <code class="ruby">    @book.user = current_user</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="83">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="30" data-linenumber="84">
-          <span class="hits">30</span>
-          
-          <code class="ruby">    respond_to do |format|</code>
-        </li>
-      
-        <li class="covered" data-hits="30" data-linenumber="85">
-          <span class="hits">30</span>
-          
-          <code class="ruby">      if @book.save</code>
-        </li>
-      
-        <li class="covered" data-hits="60" data-linenumber="86">
-          <span class="hits">60</span>
-          
-          <code class="ruby">        format.html { redirect_to @book, notice: &#39;Book was successfully created.&#39; }</code>
-        </li>
-      
-        <li class="covered" data-hits="30" data-linenumber="87">
-          <span class="hits">30</span>
-          
-          <code class="ruby">        format.json { render :show, status: :created, location: @book }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="88">
-          
-          
-          <code class="ruby">      else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="89">
-          
-          
-          <code class="ruby">        format.html { render :new }</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="90">
-          
-          
-          <code class="ruby">        format.json { render json: @book.errors, status: :unprocessable_entity }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="93">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="94">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="95">
-          
-          
-          <code class="ruby">  # PATCH/PUT /books/1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="96">
-          
-          
-          <code class="ruby">  # PATCH/PUT /books/1.json</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="97">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  def update</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="98">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    respond_to do |format|</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="99">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      if can? :update, @book</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="100">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        if @book.update(book_params)</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="101">
-          <span class="hits">4</span>
-          
-          <code class="ruby">          format.html { redirect_to @book, notice: &#39;Book was successfully updated.&#39; }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="102">
-          
-          
-          <code class="ruby">        else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="103">
-          
-          
-          <code class="ruby">          format.html { render :edit }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="104">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="105">
-          
-          
-          <code class="ruby">      else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="106">
-          
-          
-          <code class="ruby">        format.html {redirect_to @book, notice: &#39;You cannot edit this book.&#39;}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="107">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="108">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="109">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="110">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="111">
-          
-          
-          <code class="ruby">  # DELETE /books/1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="112">
-          
-          
-          <code class="ruby">  # DELETE /books/1.json</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="113">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  def destroy</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="114">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    if can? :destroy, @book</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="115">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      @book.destroy</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="116">
-          <span class="hits">2</span>
-          
-          <code class="ruby">      respond_to do |format|</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="117">
-          <span class="hits">4</span>
-          
-          <code class="ruby">        format.html { redirect_to books_url, notice: &#39;Book was successfully destroyed.&#39; }</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="118">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        format.json { head :no_content }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="119">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="121">
+        <li class="covered" data-hits="8" data-linenumber="52">
+          <span class="hits">8</span>
           
-          
-          <code class="ruby">      respond_to do |format|</code>
+          <code class="ruby">      @books = query.to_a.sort {|a,b| a.rating &lt;=&gt; b.rating}.reverse</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="122">
-          
-          
-          <code class="ruby">        format.html {redirect_to @book, notice: &#39;You may not delete this book.&#39;}</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="123">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="124">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="125">
+        <li class="covered" data-hits="9" data-linenumber="54">
+          <span class="hits">9</span>
+          
+          <code class="ruby">    @user = current_user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="126">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="127">
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">  # GET /books/1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">  # GET /books/1.json</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="59">
           <span class="hits">2</span>
           
-          <code class="ruby">  def toggle_activation</code>
+          <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="128">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="37" data-linenumber="60">
+          <span class="hits">37</span>
           
-          <code class="ruby">    @book.active = !@book.active</code>
+          <code class="ruby">    @book = Book.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="129">
+        <li class="covered" data-hits="37" data-linenumber="61">
+          <span class="hits">37</span>
+          
+          <code class="ruby">    @book_review = BookReview.new book: @book</code>
+        </li>
+      
+        <li class="covered" data-hits="37" data-linenumber="62">
+          <span class="hits">37</span>
+          
+          <code class="ruby">    @book_reviews = @book.book_reviews</code>
+        </li>
+      
+        <li class="covered" data-hits="37" data-linenumber="63">
+          <span class="hits">37</span>
+          
+          <code class="ruby">    @user = current_user</code>
+        </li>
+      
+        <li class="covered" data-hits="37" data-linenumber="64">
+          <span class="hits">37</span>
+          
+          <code class="ruby">    if @user</code>
+        </li>
+      
+        <li class="covered" data-hits="37" data-linenumber="65">
+          <span class="hits">37</span>
+          
+          <code class="ruby">      @rating =</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">        if Rating.where(&quot;book_id = ? AND user_id = ?&quot;, @book.id, @user.id).empty?</code>
+        </li>
+      
+        <li class="covered" data-hits="33" data-linenumber="67">
+          <span class="hits">33</span>
+          
+          <code class="ruby">          Rating.create!(user: @user, book: @book)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="69">
+          <span class="hits">4</span>
+          
+          <code class="ruby">          Rating.where(&quot;book_id = ? AND user_id = ?&quot;, @book.id, @user.id).first</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="130">
+        <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">    # save book on first activate</code>
+          <code class="ruby">  # GET /books/new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="131">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="75">
+          <span class="hits">2</span>
           
-          <code class="ruby">    if @book.active and (not @book.approved_at)</code>
+          <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="132">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="28" data-linenumber="76">
+          <span class="hits">28</span>
           
-          <code class="ruby">      @book.approved_at = Time.now</code>
+          <code class="ruby">    @book = Book.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">  # GET /books/1/edit</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="80">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  def edit</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="81">
+          
+          
+          <code class="ruby">    if cannot? :update, @book</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="82">
+          
+          
+          <code class="ruby">      redirect_to @book, notice: &#39;You cannot edit this book.&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">  # POST /books</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">  # POST /books.json</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="88">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="covered" data-hits="30" data-linenumber="89">
+          <span class="hits">30</span>
+          
+          <code class="ruby">    @book = Book.new(book_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="30" data-linenumber="90">
+          <span class="hits">30</span>
+          
+          <code class="ruby">    @book.user = current_user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="30" data-linenumber="92">
+          <span class="hits">30</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="30" data-linenumber="93">
+          <span class="hits">30</span>
+          
+          <code class="ruby">      if @book.save</code>
+        </li>
+      
+        <li class="covered" data-hits="60" data-linenumber="94">
+          <span class="hits">60</span>
+          
+          <code class="ruby">        format.html { redirect_to @book, notice: &#39;Book was successfully created.&#39; }</code>
+        </li>
+      
+        <li class="covered" data-hits="30" data-linenumber="95">
+          <span class="hits">30</span>
+          
+          <code class="ruby">        format.json { render :show, status: :created, location: @book }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="97">
+          
+          
+          <code class="ruby">        format.html { render :new }</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="98">
+          
+          
+          <code class="ruby">        format.json { render json: @book.errors, status: :unprocessable_entity }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby">  # PATCH/PUT /books/1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
+          
+          
+          <code class="ruby">  # PATCH/PUT /books/1.json</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="105">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="106">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="107">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      if can? :update, @book</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="108">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        if @book.update(book_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="109">
+          <span class="hits">4</span>
+          
+          <code class="ruby">          format.html { redirect_to @book, notice: &#39;Book was successfully updated.&#39; }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="111">
+          
+          
+          <code class="ruby">          format.html { render :edit }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="114">
+          
+          
+          <code class="ruby">        format.html {redirect_to @book, notice: &#39;You cannot edit this book.&#39;}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="117">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">  # DELETE /books/1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">  # DELETE /books/1.json</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="121">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="122">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if can? :destroy, @book</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="123">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @book.destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="124">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="125">
+          <span class="hits">4</span>
+          
+          <code class="ruby">        format.html { redirect_to books_url, notice: &#39;Book was successfully destroyed.&#39; }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="126">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        format.json { head :no_content }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="128">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="129">
+          
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="130">
+          
+          
+          <code class="ruby">        format.html {redirect_to @book, notice: &#39;You may not delete this book.&#39;}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="133">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="134">
@@ -2412,133 +2418,181 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="135">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="135">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @book.save</code>
+          <code class="ruby">  def toggle_activation</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="136">
           <span class="hits">1</span>
           
-          <code class="ruby">    respond_to do |format|</code>
+          <code class="ruby">    @book.active = !@book.active</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="137">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="137">
           
-          <code class="ruby">      format.html { redirect_to books_url, notice: &#39;Book has been deactivated.&#39; }</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="138">
           
           
+          <code class="ruby">    # save book on first activate</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="139">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    if @book.active and (not @book.approved_at)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="140">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @book.approved_at = Time.now</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="141">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="139">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="140">
+        <li class="never" data-hits="" data-linenumber="142">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="141">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
           
-          <code class="ruby">  def get_follower user, book</code>
+          <code class="ruby">    @book.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="142">
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    Follower.where(&quot;user_id = ? and book_id = ?&quot;, user.id, book.id).first</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="143">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="144">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">    respond_to do |format|</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="145">
           <span class="hits">2</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">      format.html { redirect_to books_url, notice: &#39;Book has been deactivated.&#39; }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="146">
           
           
-          <code class="ruby">    # Use callbacks to share common setup or constraints between actions.</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="147">
           
           
-          <code class="ruby">    # def set_book</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="148">
           
           
-          <code class="ruby">    #   @book = Book.find(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="149">
-          
-          
-          <code class="ruby">    # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="150">
-          
-          
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="149">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  def get_follower user, book</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="150">
+          
+          
+          <code class="ruby">    Follower.where(&quot;user_id = ? and book_id = ?&quot;, user.id, book.id).first</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
           
           
-          <code class="ruby">    # Never trust parameters from the scary internet, only allow the white list through.</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="152">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    def book_params</code>
-        </li>
-      
-        <li class="covered" data-hits="62" data-linenumber="153">
-          <span class="hits">62</span>
-          
-          <code class="ruby">      params.require(:book).permit(:photos, :author, :title, :status, :isbn, :rating, :active, :approved_at)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="154">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="155">
+        <li class="never" data-hits="" data-linenumber="152">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="2" data-linenumber="153">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby">    # Use callbacks to share common setup or constraints between actions.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">    # def set_book</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby">    #   @book = Book.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby">    # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby">    # Never trust parameters from the scary internet, only allow the white list through.</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="160">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    def book_params</code>
+        </li>
+      
+        <li class="covered" data-hits="62" data-linenumber="161">
+          <span class="hits">62</span>
+          
+          <code class="ruby">      params.require(:book).permit(:photos, :author, :title, :status, :isbn, :rating, :active, :approved_at)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="164">
           
           
           <code class="ruby">end</code>
@@ -2958,14 +3012,14 @@
           <code class="ruby">  def welcome user_id</code>
         </li>
       
-        <li class="covered" data-hits="139" data-linenumber="4">
-          <span class="hits">139</span>
+        <li class="covered" data-hits="75" data-linenumber="4">
+          <span class="hits">75</span>
           
           <code class="ruby">    user = User.find user_id</code>
         </li>
       
-        <li class="covered" data-hits="139" data-linenumber="5">
-          <span class="hits">139</span>
+        <li class="covered" data-hits="75" data-linenumber="5">
+          <span class="hits">75</span>
           
           <code class="ruby">    mail(to: user.email, subject: &quot;Welcome #{user.firstname}!&quot;)</code>
         </li>
@@ -3373,11 +3427,11 @@
         <div class="source_table" id="08202320a0b7edce359f48db2f2e91d918604da4">
   <div class="header">
     <h3>app/models/book.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">96.97 %</span> covered</h4>
     <div>
-      <b>30</b> relevant lines. 
-      <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>33</b> relevant lines. 
+      <span class="green"><b>32</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -3396,8 +3450,8 @@
           <code class="ruby">  include PublicActivity::Model</code>
         </li>
       
-        <li class="covered" data-hits="847" data-linenumber="3">
-          <span class="hits">847</span>
+        <li class="covered" data-hits="367" data-linenumber="3">
+          <span class="hits">367</span>
           
           <code class="ruby">  tracked owner: -&gt;(controller, model) { controller.current_user if (!!controller &amp;&amp; !controller.admin_user) }</code>
         </li>
@@ -3462,226 +3516,226 @@
           <code class="ruby">  attr_accessor :rating</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="14">
+          <span class="hits">3</span>
           
           <code class="ruby">  scope :active_books, -&gt; {where(active: true)}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="9" data-linenumber="15">
+          <span class="hits">9</span>
+          
+          <code class="ruby">  scope :active_or_mine, -&gt;(user_id) {where(&quot;active = ? OR user_id = ?&quot;, true, user_id)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
+        <li class="covered" data-hits="2" data-linenumber="17">
           <span class="hits">2</span>
           
           <code class="ruby">  def approved</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="17">
+        <li class="covered" data-hits="12" data-linenumber="18">
           <span class="hits">12</span>
           
           <code class="ruby">    !approved_at.blank?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="20">
+        <li class="covered" data-hits="2" data-linenumber="21">
           <span class="hits">2</span>
           
           <code class="ruby">  has_attachments :photos, maximum: 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby">  # validates :photos, presence: true</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
+          <code class="ruby">  # validates :photos, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="24">
+        <li class="covered" data-hits="2" data-linenumber="25">
           <span class="hits">2</span>
           
           <code class="ruby">  def self.sorted_by_rating</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="25">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="26">
+          
           
           <code class="ruby">    Book.all.sort_by(&amp;:rating)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="28">
+        <li class="covered" data-hits="2" data-linenumber="29">
           <span class="hits">2</span>
           
           <code class="ruby">  def rating</code>
         </li>
       
-        <li class="covered" data-hits="904" data-linenumber="29">
-          <span class="hits">904</span>
+        <li class="covered" data-hits="391" data-linenumber="30">
+          <span class="hits">391</span>
           
-          <code class="ruby">    count = ratings.where(&quot;score != 0&quot;).count # count ratings for this book</code>
+          <code class="ruby">    if ! @rating_val</code>
         </li>
       
-        <li class="covered" data-hits="904" data-linenumber="30">
-          <span class="hits">904</span>
+        <li class="covered" data-hits="187" data-linenumber="31">
+          <span class="hits">187</span>
           
-          <code class="ruby">    if count &gt; 0</code>
+          <code class="ruby">      count = ratings.where(&quot;score != 0&quot;).count # count ratings for this book</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="31">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="187" data-linenumber="32">
+          <span class="hits">187</span>
           
-          <code class="ruby">      sum_of_ratings = ratings.where(&quot;score != 0&quot;).sum(&quot;score&quot;)</code>
+          <code class="ruby">      if count &gt; 0</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="32">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="9" data-linenumber="33">
+          <span class="hits">9</span>
           
-          <code class="ruby">      return sum_of_ratings/count</code>
+          <code class="ruby">        sum_of_ratings = ratings.where(&quot;score != 0&quot;).sum(&quot;score&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="covered" data-hits="9" data-linenumber="34">
+          <span class="hits">9</span>
           
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="894" data-linenumber="34">
-          <span class="hits">894</span>
-          
-          <code class="ruby">      return 0</code>
+          <code class="ruby">        @rating_val = sum_of_ratings/count</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="178" data-linenumber="36">
+          <span class="hits">178</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">        @rating_val = 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="38">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  def deleteable</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">    # a book is deleteable if it has no reviews, and no one has rated it</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">    # Since we create a rating with 0 for users who view a page, even if</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">    # that user has not rated, we need to exclude 0 ratings.</code>
-        </li>
-      
-        <li class="covered" data-hits="36" data-linenumber="42">
-          <span class="hits">36</span>
-          
-          <code class="ruby">    if book_reviews.count == 0 &amp;&amp; ( ratings.where(&#39;score != 0&#39;).count == 0 )</code>
-        </li>
-      
-        <li class="covered" data-hits="33" data-linenumber="43">
-          <span class="hits">33</span>
-          
-          <code class="ruby">      true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="45">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      false</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="covered" data-hits="391" data-linenumber="39">
+          <span class="hits">391</span>
+          
+          <code class="ruby">    @rating_val</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="48">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="49">
+        <li class="covered" data-hits="2" data-linenumber="42">
           <span class="hits">2</span>
           
-          <code class="ruby">  def followed? user</code>
+          <code class="ruby">  def deleteable</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">    # a book is deleteable if it has no reviews, and no one has rated it</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">    # Since we create a rating with 0 for users who view a page, even if</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    # that user has not rated, we need to exclude 0 ratings.</code>
+        </li>
+      
+        <li class="covered" data-hits="36" data-linenumber="46">
           <span class="hits">36</span>
           
-          <code class="ruby">    Follower.where(&quot;user_id = ? and book_id = ?&quot;, user.id, self.id).length  &gt; 0 ? true : false</code>
+          <code class="ruby">    if book_reviews.count == 0 &amp;&amp; ( ratings.where(&#39;score != 0&#39;).count == 0 )</code>
+        </li>
+      
+        <li class="covered" data-hits="33" data-linenumber="47">
+          <span class="hits">33</span>
+          
+          <code class="ruby">      true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="49">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
@@ -3696,7 +3750,31 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="covered" data-hits="2" data-linenumber="53">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  def followed? user</code>
+        </li>
+      
+        <li class="covered" data-hits="36" data-linenumber="54">
+          <span class="hits">36</span>
+          
+          <code class="ruby">    Follower.where(&quot;user_id = ? and book_id = ?&quot;, user.id, self.id).length  &gt; 0 ? true : false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">end</code>
@@ -4023,19 +4101,19 @@
         <li class="covered" data-hits="2" data-linenumber="8">
           <span class="hits">2</span>
           
-          <code class="ruby">  devise :database_authenticatable, :registerable,</code>
+          <code class="ruby">  devise :invitable, :database_authenticatable, :registerable,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">         :recoverable, :rememberable, :trackable, :validatable</code>
+          <code class="ruby">         :recoverable, :rememberable, :trackable, :validatable,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">         :confirmable, :invitable  # needed for invites</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
@@ -4047,178 +4125,184 @@
         <li class="never" data-hits="" data-linenumber="12">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
           <code class="ruby">  # stats for users</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
+        <li class="covered" data-hits="2" data-linenumber="14">
           <span class="hits">2</span>
           
           <code class="ruby">  def total_logins</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    # logins</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="15">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="11" data-linenumber="16">
+          <span class="hits">11</span>
           
           <code class="ruby">    sign_in_counter</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="18">
+        <li class="covered" data-hits="2" data-linenumber="19">
           <span class="hits">2</span>
           
           <code class="ruby">  def book_reviews_count</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="19">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="11" data-linenumber="20">
+          <span class="hits">11</span>
           
           <code class="ruby">    PublicActivity::Activity.where(owner_id: id, key: &#39;book_review.create&#39;).count</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
+        <li class="covered" data-hits="2" data-linenumber="23">
           <span class="hits">2</span>
           
           <code class="ruby">  def books_count</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="23">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="11" data-linenumber="24">
+          <span class="hits">11</span>
           
           <code class="ruby">    PublicActivity::Activity.where(owner_id: id, key: &#39;book.create&#39;).count</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="26">
+        <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
           <code class="ruby">  def ratings_ave</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">    # need to make it so admins&#39; actions do not affect this score.</code>
         </li>
       
-        <li class="covered" data-hits="27" data-linenumber="28">
-          <span class="hits">27</span>
+        <li class="covered" data-hits="11" data-linenumber="29">
+          <span class="hits">11</span>
           
           <code class="ruby">    if ratings.count &gt; 0</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="29">
+        <li class="covered" data-hits="5" data-linenumber="30">
           <span class="hits">5</span>
           
           <code class="ruby">      ratings.average(:score)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="31">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="6" data-linenumber="32">
+          <span class="hits">6</span>
           
           <code class="ruby">      &#39;No ratings&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="35">
+        <li class="covered" data-hits="2" data-linenumber="36">
           <span class="hits">2</span>
           
           <code class="ruby">  def send_email</code>
         </li>
       
-        <li class="covered" data-hits="139" data-linenumber="36">
-          <span class="hits">139</span>
+        <li class="covered" data-hits="75" data-linenumber="37">
+          <span class="hits">75</span>
           
           <code class="ruby">    UserMailer.welcome(id).deliver!</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="39">
+        <li class="covered" data-hits="2" data-linenumber="40">
           <span class="hits">2</span>
           
           <code class="ruby">  after_create :send_email</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">end</code>
@@ -4953,8 +5037,8 @@
     <h3>config/initializers/devise.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5037,7 +5121,7 @@
         <li class="covered" data-hits="2" data-linenumber="13">
           <span class="hits">2</span>
           
-          <code class="ruby">  config.mailer_sender = &#39;please-change-me-at-config-initializers-devise@example.com&#39;</code>
+          <code class="ruby">  config.mailer_sender = &#39;no-reply@railsbookapp.herokuapp.com&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -5571,91 +5655,91 @@
         <li class="never" data-hits="" data-linenumber="102">
           
           
-          <code class="ruby">  # ==&gt; Configuration for :confirmable</code>
+          <code class="ruby">  # ==&gt; Configuration for :invitable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby">  # A period that the user is allowed to access the website even without</code>
+          <code class="ruby">  # The period the generated invitation token is valid, after</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
           
           
-          <code class="ruby">  # confirming their account. For instance, if set to 2.days, the user will be</code>
+          <code class="ruby">  # this period, the invited resource won&#39;t be able to accept the invitation.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="105">
           
           
-          <code class="ruby">  # able to access the website for two days without confirming their account,</code>
+          <code class="ruby">  # When invite_for is 0 (the default), the invitation won&#39;t expire.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="covered" data-hits="2" data-linenumber="106">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  # access will be blocked just in the third day. Default is 0.days, meaning</code>
+          <code class="ruby">  config.invite_for = 2.weeks</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="107">
           
           
-          <code class="ruby">  # the user cannot access the website without confirming their account.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="108">
           
           
-          <code class="ruby">  # config.allow_unconfirmed_access_for = 2.days</code>
+          <code class="ruby">  # Number of invitations users can send.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="109">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # - If invitation_limit is nil, there is no limit for invitations, users can</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="110">
           
           
-          <code class="ruby">  # A period that the user is allowed to confirm their account before their</code>
+          <code class="ruby">  # send unlimited invitations, invitation_limit column is not used.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="111">
           
           
-          <code class="ruby">  # token becomes invalid. For example, if set to 3.days, the user can confirm</code>
+          <code class="ruby">  # - If invitation_limit is 0, users can&#39;t send invitations by default.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="112">
           
           
-          <code class="ruby">  # their account within 3 days after the mail was sent, but on the fourth day</code>
+          <code class="ruby">  # - If invitation_limit n &gt; 0, users can send n invitations.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="113">
           
           
-          <code class="ruby">  # their account can&#39;t be confirmed with the token any more.</code>
+          <code class="ruby">  # You can change invitation_limit column for some users so they can send more</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
           
           
-          <code class="ruby">  # Default is nil, meaning there is no restriction on how long a user can take</code>
+          <code class="ruby">  # or less invitations, even with global invitation_limit = 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="115">
           
           
-          <code class="ruby">  # before confirming their account.</code>
+          <code class="ruby">  # Default: nil</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="116">
           
           
-          <code class="ruby">  # config.confirm_within = 3.days</code>
+          <code class="ruby">  # config.invitation_limit = 5</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="117">
@@ -5667,49 +5751,49 @@
         <li class="never" data-hits="" data-linenumber="118">
           
           
-          <code class="ruby">  # If true, requires any email changes to be confirmed (exactly the same way as</code>
+          <code class="ruby">  # The key to be used to check existing users when sending an invitation</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="119">
           
           
-          <code class="ruby">  # initial account confirmation) to be applied. Requires additional unconfirmed_email</code>
+          <code class="ruby">  # and the regexp used to test it when validate_on_invite is not set.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="120">
           
           
-          <code class="ruby">  # db field (see migrations). Until confirmed, new email is stored in</code>
+          <code class="ruby">  # config.invite_key = {:email =&gt; /\A[^@]+@[^@]+\z/}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="121">
           
           
-          <code class="ruby">  # unconfirmed_email column, and copied to email column on successful confirmation.</code>
+          <code class="ruby">  # config.invite_key = {:email =&gt; /\A[^@]+@[^@]+\z/, :username =&gt; nil}</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="122">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  config.reconfirmable = true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="123">
+        <li class="never" data-hits="" data-linenumber="122">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">  # Flag that force a record to be valid before being actually invited</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="124">
           
           
-          <code class="ruby">  # Defines which key will be used when confirming an account</code>
+          <code class="ruby">  # Default: false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="125">
           
           
-          <code class="ruby">  # config.confirmation_keys = [ :email ]</code>
+          <code class="ruby">  # config.validate_on_invite = true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="126">
@@ -5721,19 +5805,19 @@
         <li class="never" data-hits="" data-linenumber="127">
           
           
-          <code class="ruby">  # ==&gt; Configuration for :rememberable</code>
+          <code class="ruby">  # Resend invitation if user with invited status is invited again</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="128">
           
           
-          <code class="ruby">  # The time the user will be remembered without asking for credentials again.</code>
+          <code class="ruby">  # Default: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="129">
           
           
-          <code class="ruby">  # config.remember_for = 2.weeks</code>
+          <code class="ruby">  # config.resend_invitation = false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="130">
@@ -5745,295 +5829,295 @@
         <li class="never" data-hits="" data-linenumber="131">
           
           
-          <code class="ruby">  # If true, extends the user&#39;s remember period when remembered via cookie.</code>
+          <code class="ruby">  # The class name of the inviting model. If this is nil,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="132">
           
           
-          <code class="ruby">  # config.extend_remember_period = false</code>
+          <code class="ruby">  # the #invited_by association is declared to be polymorphic.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="133">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Default: nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="134">
+        <li class="covered" data-hits="2" data-linenumber="134">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  # Options to be passed to the created cookie. For instance, you can set</code>
+          <code class="ruby">  config.invited_by_class_name = &#39;User&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="135">
           
           
-          <code class="ruby">  # secure: true in order to force SSL only cookies.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="136">
           
           
-          <code class="ruby">  # config.rememberable_options = {}</code>
+          <code class="ruby">  # The column name used for counter_cache column. If this is nil,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="137">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # the #invited_by association is declared without counter_cache.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="138">
           
           
-          <code class="ruby">  # ==&gt; Configuration for :validatable</code>
+          <code class="ruby">  # Default: nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="139">
-          
-          
-          <code class="ruby">  # Range for password length.</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="140">
+        <li class="covered" data-hits="2" data-linenumber="139">
           <span class="hits">2</span>
           
-          <code class="ruby">  config.password_length = 8..128</code>
+          <code class="ruby">  config.invited_by_counter_cache = :invitations_count</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # ==&gt; Configuration for :confirmable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="142">
           
           
-          <code class="ruby">  # Email regex used to validate email formats. It simply asserts that</code>
+          <code class="ruby">  # A period that the user is allowed to access the website even without</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="143">
           
           
-          <code class="ruby">  # one (and only one) @ exists in the given string. This is mainly</code>
+          <code class="ruby">  # confirming their account. For instance, if set to 2.days, the user will be</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="144">
           
           
-          <code class="ruby">  # to give user feedback and not to assert the e-mail validity.</code>
+          <code class="ruby">  # able to access the website for two days without confirming their account,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="145">
           
           
-          <code class="ruby">  # config.email_regexp = /\A[^@]+@[^@]+\z/</code>
+          <code class="ruby">  # access will be blocked just in the third day. Default is 0.days, meaning</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="146">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # the user cannot access the website without confirming their account.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="147">
           
           
-          <code class="ruby">  # ==&gt; Configuration for :timeoutable</code>
+          <code class="ruby">  # config.allow_unconfirmed_access_for = 2.days</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="148">
           
           
-          <code class="ruby">  # The time you want to timeout the user session without activity. After this</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="149">
           
           
-          <code class="ruby">  # time the user will be asked for credentials again. Default is 30 minutes.</code>
+          <code class="ruby">  # A period that the user is allowed to confirm their account before their</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="150">
           
           
-          <code class="ruby">  # config.timeout_in = 30.minutes</code>
+          <code class="ruby">  # token becomes invalid. For example, if set to 3.days, the user can confirm</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="151">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # their account within 3 days after the mail was sent, but on the fourth day</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="152">
           
           
-          <code class="ruby">  # If true, expires auth token on session timeout.</code>
+          <code class="ruby">  # their account can&#39;t be confirmed with the token any more.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="153">
           
           
-          <code class="ruby">  # config.expire_auth_token_on_timeout = false</code>
+          <code class="ruby">  # Default is nil, meaning there is no restriction on how long a user can take</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="154">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # before confirming their account.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="155">
           
           
-          <code class="ruby">  # ==&gt; Configuration for :lockable</code>
+          <code class="ruby">  # config.confirm_within = 3.days</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="156">
           
           
-          <code class="ruby">  # Defines which strategy will be used to lock an account.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="157">
           
           
-          <code class="ruby">  # :failed_attempts = Locks an account after a number of failed attempts to sign in.</code>
+          <code class="ruby">  # If true, requires any email changes to be confirmed (exactly the same way as</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="158">
           
           
-          <code class="ruby">  # :none            = No lock strategy. You should handle locking by yourself.</code>
+          <code class="ruby">  # initial account confirmation) to be applied. Requires additional unconfirmed_email</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="159">
           
           
-          <code class="ruby">  # config.lock_strategy = :failed_attempts</code>
+          <code class="ruby">  # db field (see migrations). Until confirmed, new email is stored in</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="160">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # unconfirmed_email column, and copied to email column on successful confirmation.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="161">
           
           
-          <code class="ruby">  # Defines which key will be used when locking and unlocking an account</code>
+          <code class="ruby">  # config.reconfirmable = true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="162">
           
           
-          <code class="ruby">  # config.unlock_keys = [ :email ]</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="163">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Defines which key will be used when confirming an account</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="164">
           
           
-          <code class="ruby">  # Defines which strategy will be used to unlock an account.</code>
+          <code class="ruby">  # config.confirmation_keys = [ :email ]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="165">
           
           
-          <code class="ruby">  # :email = Sends an unlock link to the user email</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="166">
           
           
-          <code class="ruby">  # :time  = Re-enables login after a certain amount of time (see :unlock_in below)</code>
+          <code class="ruby">  # ==&gt; Configuration for :rememberable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="167">
           
           
-          <code class="ruby">  # :both  = Enables both strategies</code>
+          <code class="ruby">  # The time the user will be remembered without asking for credentials again.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="168">
           
           
-          <code class="ruby">  # :none  = No unlock strategy. You should handle unlocking by yourself.</code>
+          <code class="ruby">  # config.remember_for = 2.weeks</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="169">
           
           
-          <code class="ruby">  # config.unlock_strategy = :both</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="170">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # If true, extends the user&#39;s remember period when remembered via cookie.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="171">
           
           
-          <code class="ruby">  # Number of authentication tries before locking an account if lock_strategy</code>
+          <code class="ruby">  # config.extend_remember_period = false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="172">
           
           
-          <code class="ruby">  # is failed attempts.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="173">
           
           
-          <code class="ruby">  # config.maximum_attempts = 20</code>
+          <code class="ruby">  # Options to be passed to the created cookie. For instance, you can set</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="174">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # secure: true in order to force SSL only cookies.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="175">
           
           
-          <code class="ruby">  # Time interval to unlock the account if :time is enabled as unlock_strategy.</code>
+          <code class="ruby">  # config.rememberable_options = {}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="176">
           
           
-          <code class="ruby">  # config.unlock_in = 1.hour</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="177">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # ==&gt; Configuration for :validatable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="178">
           
           
-          <code class="ruby">  # Warn on the last attempt before the account is locked.</code>
+          <code class="ruby">  # Range for password length.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="179">
+        <li class="covered" data-hits="2" data-linenumber="179">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  # config.last_attempt_warning = false</code>
+          <code class="ruby">  config.password_length = 8..128</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="180">
@@ -6045,25 +6129,25 @@
         <li class="never" data-hits="" data-linenumber="181">
           
           
-          <code class="ruby">  # ==&gt; Configuration for :recoverable</code>
+          <code class="ruby">  # Email regex used to validate email formats. It simply asserts that</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="182">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # one (and only one) @ exists in the given string. This is mainly</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="183">
           
           
-          <code class="ruby">  # Defines which key will be used when recovering the password for an account</code>
+          <code class="ruby">  # to give user feedback and not to assert the e-mail validity.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="184">
           
           
-          <code class="ruby">  # config.reset_password_keys = [ :email ]</code>
+          <code class="ruby">  # config.email_regexp = /\A[^@]+@[^@]+\z/</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="185">
@@ -6075,25 +6159,25 @@
         <li class="never" data-hits="" data-linenumber="186">
           
           
-          <code class="ruby">  # Time interval you can reset your password with a reset password key.</code>
+          <code class="ruby">  # ==&gt; Configuration for :timeoutable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="187">
           
           
-          <code class="ruby">  # Don&#39;t put a too small interval or your users won&#39;t have the time to</code>
+          <code class="ruby">  # The time you want to timeout the user session without activity. After this</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="188">
           
           
-          <code class="ruby">  # change their passwords.</code>
+          <code class="ruby">  # time the user will be asked for credentials again. Default is 30 minutes.</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="189">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="189">
           
-          <code class="ruby">  config.reset_password_within = 6.hours</code>
+          
+          <code class="ruby">  # config.timeout_in = 30.minutes</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="190">
@@ -6105,394 +6189,628 @@
         <li class="never" data-hits="" data-linenumber="191">
           
           
-          <code class="ruby">  # ==&gt; Configuration for :encryptable</code>
+          <code class="ruby">  # If true, expires auth token on session timeout.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="192">
           
           
-          <code class="ruby">  # Allow you to use another encryption algorithm besides bcrypt (default). You can use</code>
+          <code class="ruby">  # config.expire_auth_token_on_timeout = false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="193">
           
           
-          <code class="ruby">  # :sha1, :sha512 or encryptors from others authentication tools as :clearance_sha1,</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="194">
           
           
-          <code class="ruby">  # :authlogic_sha512 (then you should set stretches above to 20 for default behavior)</code>
+          <code class="ruby">  # ==&gt; Configuration for :lockable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="195">
           
           
-          <code class="ruby">  # and :restful_authentication_sha1 (then you should set stretches to 10, and copy</code>
+          <code class="ruby">  # Defines which strategy will be used to lock an account.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="196">
           
           
-          <code class="ruby">  # REST_AUTH_SITE_KEY to pepper).</code>
+          <code class="ruby">  # :failed_attempts = Locks an account after a number of failed attempts to sign in.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="197">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # :none            = No lock strategy. You should handle locking by yourself.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="198">
           
           
-          <code class="ruby">  # Require the `devise-encryptable` gem when using anything other than bcrypt</code>
+          <code class="ruby">  # config.lock_strategy = :failed_attempts</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="199">
           
           
-          <code class="ruby">  # config.encryptor = :sha512</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="200">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Defines which key will be used when locking and unlocking an account</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="201">
           
           
-          <code class="ruby">  # ==&gt; Scopes configuration</code>
+          <code class="ruby">  # config.unlock_keys = [ :email ]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="202">
           
           
-          <code class="ruby">  # Turn scoped views on. Before rendering &quot;sessions/new&quot;, it will first check for</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="203">
           
           
-          <code class="ruby">  # &quot;users/sessions/new&quot;. It&#39;s turned off by default because it&#39;s slower if you</code>
+          <code class="ruby">  # Defines which strategy will be used to unlock an account.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="204">
           
           
-          <code class="ruby">  # are using only default views.</code>
+          <code class="ruby">  # :email = Sends an unlock link to the user email</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="205">
           
           
-          <code class="ruby">  # config.scoped_views = false</code>
+          <code class="ruby">  # :time  = Re-enables login after a certain amount of time (see :unlock_in below)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="206">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # :both  = Enables both strategies</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="207">
           
           
-          <code class="ruby">  # Configure the default scope given to Warden. By default it&#39;s the first</code>
+          <code class="ruby">  # :none  = No unlock strategy. You should handle unlocking by yourself.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="208">
           
           
-          <code class="ruby">  # devise role declared in your routes (usually :user).</code>
+          <code class="ruby">  # config.unlock_strategy = :both</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="209">
           
           
-          <code class="ruby">  # config.default_scope = :user</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="210">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Number of authentication tries before locking an account if lock_strategy</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="211">
           
           
-          <code class="ruby">  # Set this configuration to false if you want /users/sign_out to sign out</code>
+          <code class="ruby">  # is failed attempts.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="212">
           
           
-          <code class="ruby">  # only the current scope. By default, Devise signs out all scopes.</code>
+          <code class="ruby">  # config.maximum_attempts = 20</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="213">
           
           
-          <code class="ruby">  # config.sign_out_all_scopes = true</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="214">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Time interval to unlock the account if :time is enabled as unlock_strategy.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="215">
           
           
-          <code class="ruby">  # ==&gt; Navigation configuration</code>
+          <code class="ruby">  # config.unlock_in = 1.hour</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="216">
           
           
-          <code class="ruby">  # Lists the formats that should be treated as navigational. Formats like</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="217">
           
           
-          <code class="ruby">  # :html, should redirect to the sign in page when the user does not have</code>
+          <code class="ruby">  # Warn on the last attempt before the account is locked.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="218">
           
           
-          <code class="ruby">  # access, but formats like :xml or :json, should return 401.</code>
+          <code class="ruby">  # config.last_attempt_warning = false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="219">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="220">
           
           
-          <code class="ruby">  # If you have any extra navigational formats, like :iphone or :mobile, you</code>
+          <code class="ruby">  # ==&gt; Configuration for :recoverable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="221">
           
           
-          <code class="ruby">  # should add them to the navigational formats lists.</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="222">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # Defines which key will be used when recovering the password for an account</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="223">
           
           
-          <code class="ruby">  # The &quot;*/*&quot; below is required to match Internet Explorer requests.</code>
+          <code class="ruby">  # config.reset_password_keys = [ :email ]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="224">
           
           
-          <code class="ruby">  # config.navigational_formats = [&#39;*/*&#39;, :html]</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="225">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # Time interval you can reset your password with a reset password key.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="226">
           
           
-          <code class="ruby">  # The default HTTP method used to sign out a resource. Default is :delete.</code>
+          <code class="ruby">  # Don&#39;t put a too small interval or your users won&#39;t have the time to</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="227">
+        <li class="never" data-hits="" data-linenumber="227">
+          
+          
+          <code class="ruby">  # change their passwords.</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="228">
           <span class="hits">2</span>
           
-          <code class="ruby">  config.sign_out_via = :delete</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="228">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">  config.reset_password_within = 6.hours</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="229">
           
           
-          <code class="ruby">  # ==&gt; OmniAuth</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="230">
           
           
-          <code class="ruby">  # Add a new OmniAuth provider. Check the wiki for more information on setting</code>
+          <code class="ruby">  # ==&gt; Configuration for :encryptable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="231">
           
           
-          <code class="ruby">  # up on your models and hooks.</code>
+          <code class="ruby">  # Allow you to use another encryption algorithm besides bcrypt (default). You can use</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="232">
           
           
-          <code class="ruby">  # config.omniauth :github, &#39;APP_ID&#39;, &#39;APP_SECRET&#39;, scope: &#39;user,public_repo&#39;</code>
+          <code class="ruby">  # :sha1, :sha512 or encryptors from others authentication tools as :clearance_sha1,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="233">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # :authlogic_sha512 (then you should set stretches above to 20 for default behavior)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="234">
           
           
-          <code class="ruby">  # ==&gt; Warden configuration</code>
+          <code class="ruby">  # and :restful_authentication_sha1 (then you should set stretches to 10, and copy</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="235">
           
           
-          <code class="ruby">  # If you want to use other strategies, that are not supported by Devise, or</code>
+          <code class="ruby">  # REST_AUTH_SITE_KEY to pepper).</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="236">
           
           
-          <code class="ruby">  # change the failure app, you can configure them inside the config.warden block.</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="237">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # Require the `devise-encryptable` gem when using anything other than bcrypt</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="238">
           
           
-          <code class="ruby">  # config.warden do |manager|</code>
+          <code class="ruby">  # config.encryptor = :sha512</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="239">
           
           
-          <code class="ruby">  #   manager.intercept_401 = false</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="240">
           
           
-          <code class="ruby">  #   manager.default_strategies(scope: :user).unshift :some_external_strategy</code>
+          <code class="ruby">  # ==&gt; Scopes configuration</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="241">
           
           
-          <code class="ruby">  # end</code>
+          <code class="ruby">  # Turn scoped views on. Before rendering &quot;sessions/new&quot;, it will first check for</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="242">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # &quot;users/sessions/new&quot;. It&#39;s turned off by default because it&#39;s slower if you</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="243">
           
           
-          <code class="ruby">  # ==&gt; Mountable engine configurations</code>
+          <code class="ruby">  # are using only default views.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="244">
           
           
-          <code class="ruby">  # When using Devise inside an engine, let&#39;s call it `MyEngine`, and this engine</code>
+          <code class="ruby">  # config.scoped_views = false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="245">
           
           
-          <code class="ruby">  # is mountable, there are some extra configurations to be taken into account.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="246">
           
           
-          <code class="ruby">  # The following options are available, assuming the engine is mounted as:</code>
+          <code class="ruby">  # Configure the default scope given to Warden. By default it&#39;s the first</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="247">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # devise role declared in your routes (usually :user).</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="248">
           
           
-          <code class="ruby">  #     mount MyEngine, at: &#39;/my_engine&#39;</code>
+          <code class="ruby">  # config.default_scope = :user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="249">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="250">
           
           
-          <code class="ruby">  # The router that invoked `devise_for`, in the example above, would be:</code>
+          <code class="ruby">  # Set this configuration to false if you want /users/sign_out to sign out</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="251">
           
           
-          <code class="ruby">  # config.router_name = :my_engine</code>
+          <code class="ruby">  # only the current scope. By default, Devise signs out all scopes.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="252">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # config.sign_out_all_scopes = true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="253">
           
           
-          <code class="ruby">  # When using omniauth, Devise cannot automatically set Omniauth path,</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="254">
           
           
-          <code class="ruby">  # so you need to do it manually. For the users scope, it would be:</code>
+          <code class="ruby">  # ==&gt; Navigation configuration</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="255">
           
           
-          <code class="ruby">  # config.omniauth_path_prefix = &#39;/my_engine/users/auth&#39;</code>
+          <code class="ruby">  # Lists the formats that should be treated as navigational. Formats like</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="256">
+          
+          
+          <code class="ruby">  # :html, should redirect to the sign in page when the user does not have</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="257">
+          
+          
+          <code class="ruby">  # access, but formats like :xml or :json, should return 401.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="258">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="259">
+          
+          
+          <code class="ruby">  # If you have any extra navigational formats, like :iphone or :mobile, you</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="260">
+          
+          
+          <code class="ruby">  # should add them to the navigational formats lists.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="261">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="262">
+          
+          
+          <code class="ruby">  # The &quot;*/*&quot; below is required to match Internet Explorer requests.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="263">
+          
+          
+          <code class="ruby">  # config.navigational_formats = [&#39;*/*&#39;, :html]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="264">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="265">
+          
+          
+          <code class="ruby">  # The default HTTP method used to sign out a resource. Default is :delete.</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="266">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  config.sign_out_via = :delete</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="267">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="268">
+          
+          
+          <code class="ruby">  # ==&gt; OmniAuth</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="269">
+          
+          
+          <code class="ruby">  # Add a new OmniAuth provider. Check the wiki for more information on setting</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="270">
+          
+          
+          <code class="ruby">  # up on your models and hooks.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="271">
+          
+          
+          <code class="ruby">  # config.omniauth :github, &#39;APP_ID&#39;, &#39;APP_SECRET&#39;, scope: &#39;user,public_repo&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="272">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="273">
+          
+          
+          <code class="ruby">  # ==&gt; Warden configuration</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="274">
+          
+          
+          <code class="ruby">  # If you want to use other strategies, that are not supported by Devise, or</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="275">
+          
+          
+          <code class="ruby">  # change the failure app, you can configure them inside the config.warden block.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="276">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="277">
+          
+          
+          <code class="ruby">  # config.warden do |manager|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="278">
+          
+          
+          <code class="ruby">  #   manager.intercept_401 = false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="279">
+          
+          
+          <code class="ruby">  #   manager.default_strategies(scope: :user).unshift :some_external_strategy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="280">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="281">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="282">
+          
+          
+          <code class="ruby">  # ==&gt; Mountable engine configurations</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="283">
+          
+          
+          <code class="ruby">  # When using Devise inside an engine, let&#39;s call it `MyEngine`, and this engine</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="284">
+          
+          
+          <code class="ruby">  # is mountable, there are some extra configurations to be taken into account.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="285">
+          
+          
+          <code class="ruby">  # The following options are available, assuming the engine is mounted as:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="286">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="287">
+          
+          
+          <code class="ruby">  #     mount MyEngine, at: &#39;/my_engine&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="288">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="289">
+          
+          
+          <code class="ruby">  # The router that invoked `devise_for`, in the example above, would be:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="290">
+          
+          
+          <code class="ruby">  # config.router_name = :my_engine</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="291">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="292">
+          
+          
+          <code class="ruby">  # When using omniauth, Devise cannot automatically set Omniauth path,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="293">
+          
+          
+          <code class="ruby">  # so you need to do it manually. For the users scope, it would be:</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="294">
+          
+          
+          <code class="ruby">  # config.omniauth_path_prefix = &#39;/my_engine/users/auth&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="295">
           
           
           <code class="ruby">end</code>
