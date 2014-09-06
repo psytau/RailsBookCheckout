@@ -29,6 +29,7 @@ class AdminController < ApplicationController
   end
 
   def can_do
+    possible_cans = ['review', 'admin', 'rate']
     user = User.find(params[:user])
     it = params[:it]
     if params[:can_do_it] == 'true'
@@ -38,8 +39,8 @@ class AdminController < ApplicationController
     else
       raise :bad_params
     end
-    if ['review', 'admin', 'rate'].include? it
-      send(:"can_do_#{it}", user, can_do_it)
+    if i = possible_cans.index(it)
+      send(:"can_do_#{possible_cans[i]}", user, can_do_it)
     end
 
   end
