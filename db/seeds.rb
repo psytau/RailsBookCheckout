@@ -12,7 +12,7 @@ User.delete_all
 Book.delete_all
 admin = User.create!( firstname: 'Admin',
               lastname: 'Admin',
-              email: 'a@a.com',
+              email: 'rmccreary8@gmail.com',
               # admin: true, # use rolify instead of a db flag
               address: '123 Fake Street',
               city: 'Seattle',
@@ -28,7 +28,7 @@ admin.add_role "admin"
 #Normie
 normie = User.create!( firstname: 'Tom',
               lastname: 'Fakerson',
-              email: 'b@b.com',
+              email: 'rmccreary@gmail.com',
               # admin: false,
               address: '123 Fake Street',
               city: 'Seattle',
@@ -58,28 +58,28 @@ Book.create!( author: 'Stephen Baxter',
               user: normie
 )
 
-users = []
-  ('A'..'Z').each do |last_name|
-    user = User.create!(
-      :email => "#{last_name}@railsbookcheckout.com",
-      :firstname => 'Erica',
-      :lastname => last_name,
-      :password => 'p455w0rd'
-    )
-    user.confirm!
-    users << user
-  end
-  @all_books = []
-  users.each do |user|
-    users_name = "#{user.firstname} #{user.lastname}"
-    (1..10).each do |n|
-      @all_books << Book.create!( user: user,
-                                              :author => user.email,
-                                              :title => "The Autobiography of #{users_name} Vol. #{n}",
-                                              :isbn => "9999#{n}",
-                                              # only activate some of them
-                                              :active => (n<6),
-                                              :approved_at => (n<6) ? Time.now : nil
-                                             )
-    end
-  end
+# users = []
+#   ('A'..'Z').each do |last_name|
+#     user = User.create!(
+#       :email => "#{last_name}@railsbookcheckout.com",
+#       :firstname => 'Erica',
+#       :lastname => last_name,
+#       :password => 'p455w0rd'
+#     )
+#     user.confirm!
+#     users << user
+#   end
+#   @all_books = []
+#   users.each do |user|
+#     users_name = "#{user.firstname} #{user.lastname}"
+#     (1..10).each do |n|
+#       @all_books << Book.create!( user: user,
+#                                               :author => user.email,
+#                                               :title => "The Autobiography of #{users_name} Vol. #{n}",
+#                                               :isbn => "9999#{n}",
+#                                               # only activate some of them
+#                                               :active => (n<6),
+#                                               :approved_at => (n<6) ? Time.now : nil
+#                                              )
+#     end
+#   end
