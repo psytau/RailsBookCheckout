@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  extend Rolify::Dynamic
   has_many :ratings
   has_many :books
   has_many :book_reviews
