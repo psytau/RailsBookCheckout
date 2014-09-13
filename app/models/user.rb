@@ -34,4 +34,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  # This is required to make travis pass
+  # see https://github.com/RolifyCommunity/rolify/issues/28
+  def is_admin?
+    has_role? :admin
+  end
+
 end
