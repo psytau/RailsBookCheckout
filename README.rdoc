@@ -44,7 +44,7 @@ To set up this app on heroku...
 === Deployment
 * Set up your host for mailers for your heroku site.
 * We use sendgrid on Heroku, so you will need to activate that add-on
-* We use bonai elasticsearch for search. See https://github.com/psytau/RailsBookCheckout/wiki/Setting-up-Elasticsearch for how to set it up on heroku.
+* We use bonsai elasticsearch for search. See https://github.com/psytau/RailsBookCheckout/wiki/Setting-up-Elasticsearch for how to set it up on heroku.
 
 
 
