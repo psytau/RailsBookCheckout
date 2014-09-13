@@ -5,10 +5,23 @@ To set up this app on heroku...
 === System dependencies
 * Ruby 2.1.1, Rails 4.0
 
-=== Configuration
-clone and run bundle install
+=== Local installation
+  git clone git@github.com:psytau/RailsBookCheckout.git; cd RailsBookCheckout
+  bundle install
+  rake db:setup
+  rails server
+  
 
 === Services setup
+* to set up search locally, you must install elasticsearch. (https://github.com/psytau/RailsBookCheckout/wiki/Setting-up-Elasticsearch)
+* local email will be displayed in your browser via letteropener
+
+=== Configuration
+* To run locally, you must install elasticsearch. But other than that, no further set-up is needed.
+* You may want to edit db/seeds.rb to change the default admin users.
+
+
+=== Services setup for previous versions
 * to start search services, run: rake sunspot:solr:start
 * to top solr run: bundle exec sunspot-solr stop
 * You will need mandrill and cloudinary accounts
@@ -16,18 +29,25 @@ clone and run bundle install
 * To set up mandrill, you will need a mandrill API key. But the API key into Figaro's config/application.yml file
 
 ===Database setup
-* just run rake db:create, rake db:migrate
+* just run 
+  rake db:setup
 
 === Test suite
-* We use rspec and cucumber, just run rake spec or rake cucumber
+* We use rspec and cucumber.
+* To run all the tests just run rake
+  rake 
+* To run just rspec, run
+  rake rspec
+* To run just cucumber, rn
+  rake cucumber
 
 === Deployment
-* It is easy to get up and running on heroku.
+* Set up your host for mailers for your heroku site.
+* We use sendgrid on Heroku, so you will need to activate that add-on
+* We use bonai elasticsearch for search. See https://github.com/psytau/RailsBookCheckout/wiki/Setting-up-Elasticsearch for how to set it up on heroku.
 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
 {<img src="https://travis-ci.org/psytau/RailsBookCheckout.svg" alt="Build Status" />}[https://travis-ci.org/psytau/RailsBookCheckout]
 
