@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   def ratings_ave
     # need to make it so admins' actions do not affect this score.
     if ratings.count > 0
-      ratings.average(:score)
+      ratings.where('score > 0').average(:score)
     else
       'No ratings'
     end
