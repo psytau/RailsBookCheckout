@@ -7,19 +7,7 @@ class BooksController < ApplicationController
 
 
   def do_search query
-      results = query.search do
-        fulltext params[:q] do
-          boost_fields :isbn => 5.0
-          boost_fields :author => 3.0
-          boost_fields :title => 3.0
-          boost_fields :rating => 3.0
-        end
-        if params[:column]
-          sort_params = search_sort_by
-          order_by(sort_params[:column], sort_params[:order])
-        end
-      end
-      return results
+    query.search(params[:q]).records.to_a
   end
 
   def do_sort query
@@ -44,8 +32,14 @@ class BooksController < ApplicationController
       query = Book.active_books
     end
     if params[:q]
-      results = do_search query
-      @books = results.results
+      @books = do_search query
+      # not sure how to get elasticsearch to only search within the query
+      # Se we have to limit it here again
+      if current_user && cannot?(:admin, :site) # non admins can only view their own inactive books
+        @books.reject! {|b| !b.active && b.user_id != current_user.id}
+      else # guests can only view active books
+        @books.reject! {|b| !b.active}
+      end
     elsif params[:column]
       do_sort query
     else

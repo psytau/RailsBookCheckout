@@ -33,10 +33,4 @@ class User < ActiveRecord::Base
     end
   end
 
-  def send_email
-    UserMailer.welcome(id).deliver!
-  end
-
-  after_create :send_email
-
 end

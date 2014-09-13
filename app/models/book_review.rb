@@ -1,6 +1,8 @@
 class BookReview < ActiveRecord::Base
   include PublicActivity::Model
-  tracked owner: ->(controller, model) { controller.current_user unless controller && controller.admin_user }
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+  tracked owner: ->(controller, model) { controller.current_user if (!!controller && !controller.admin_user) }
   belongs_to :user
   belongs_to :book
 end

@@ -12,8 +12,10 @@ gem 'twitter-bootstrap-rails'
 gem 'cancancan'
 gem 'rolify'
 gem 'public_activity'
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails'
 
 gem 'simplecov', :require => false, :group => :test
 

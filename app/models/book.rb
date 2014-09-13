@@ -1,9 +1,13 @@
+require 'elasticsearch/model'
 class Book < ActiveRecord::Base
   include PublicActivity::Model
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+  index_name = BONSAI_INDEX_NAME
   tracked owner: ->(controller, model) { controller.current_user if (!!controller && !controller.admin_user) }
-  searchable do
-      text :author, :title, :isbn, :tags, :rating, :review
-  end
+  # searchable do
+  #     text :author, :title, :isbn, :tags, :rating, :review
+  # end
   validates :author, :title, presence: true
   has_many :reservations
   has_many :ratings
