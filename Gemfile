@@ -40,7 +40,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'poltergeist'
-  gem 'selenium-webdriver'
+  # gem 'selenium-webdriver'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem "codeclimate-test-reporter", group: :test, require: nil
