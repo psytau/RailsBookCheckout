@@ -29,7 +29,6 @@ group :development, :test do
   gem 'cucumber-slices'
   gem 'thin'
   gem 'jazz_hands'
-  gem 'selenium-webdriver'
   gem 'letter_opener'
   gem 'powder'
 end
@@ -40,6 +39,8 @@ end
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'capybara'
+  gem 'poltergeist'
+  gem 'selenium-webdriver'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem "codeclimate-test-reporter", group: :test, require: nil
