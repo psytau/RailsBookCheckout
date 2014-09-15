@@ -26,10 +26,8 @@ group :development, :test do
   gem 'launchy'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'cucumber-slices'
   gem 'thin'
   gem 'jazz_hands'
-  gem 'letter_opener'
   gem 'powder'
 end
 group :production do
@@ -44,6 +42,10 @@ group :test do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem "codeclimate-test-reporter", group: :test, require: nil
+end
+group :development do
+  gem 'letter_opener'
+  gem 'cucumber-slices'
 end
 gem 'jquery-rails'
 gem 'turbolinks'
