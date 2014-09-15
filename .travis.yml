@@ -4,3 +4,6 @@ script:
   - bundle exec cucumber --no-profile --color --format progress
 rvm:
   - "2.1.1"
+addons:
+  code_climate:
+    repo_token: 6c416d8ad479e5cb755ad65fa66fee00306f475bdc66db0416b4421960c12518
