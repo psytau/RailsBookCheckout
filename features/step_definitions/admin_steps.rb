@@ -39,6 +39,7 @@ Given(/^TestAdmin bans (\d+) users from rating$/) do |arg1|
     user = @users[n]
     check_can_do_box_for user, 'rate', false
   end
+  wait_for_ajax
 end
 
 Then(/^The (\d+) users cannot rate books$/) do |arg1|
@@ -59,6 +60,7 @@ Then(/^TestAdmin allows the (\d+) users to rate again$/) do |arg1|
     user = @users[n]
     check_can_do_box_for user, 'rate', true
   end
+  wait_for_ajax
 end
 
 Then(/^The (\d+) users try to rate a book (\d+)$/) do |arg1, arg2|
@@ -67,13 +69,17 @@ Then(/^The (\d+) users try to rate a book (\d+)$/) do |arg1, arg2|
     login_as user
 
     visit book_path(@approved_books[0])
+    wait_for_ajax
     page.find("#user_star").find_by_id("5").click
+    wait_for_ajax
   end
 end
 
 Then(/^The rating for the book is (\d+)$/) do |arg1|
-  visit book_path @approved_books[0]
-  expect(page.find("#star #score_input", :visible => false).value).to eq("5")
+  # visit book_path @approved_books[0]
+  # expect(page.find("#star #score_input", :visible => false).value).to eq("5")
+  book = Book.find(@approved_books[0].id)
+  expect(book.rating).to eq(5)
 end
 
 # ban reviewing
@@ -84,6 +90,7 @@ Given(/^TestAdmin bans (\d+) users from reviewing books$/) do |arg1|
     user = @users[n]
     check_can_do_box_for user, 'review', false
   end
+  wait_for_ajax
 end
 
 Then(/^The (\d+) users cannot review books$/) do |arg1|
@@ -101,6 +108,7 @@ Given(/^Test admin makes (\d+) users into admins$/) do |arg1|
     user = @users[n]
     check_can_do_box_for user, 'admin', true
   end
+  wait_for_ajax
 end
 
 Then(/^Those (\d+) users are admins$/) do |arg1|

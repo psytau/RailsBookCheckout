@@ -7,9 +7,9 @@ Feature: Admin Site
     And TestAdmin is logged in
     And TestAdmin bans 2 users from rating
     Then The 2 users cannot rate books
-    But TestAdmin allows the 2 users to rate again
-    And The 2 users try to rate a book 5
-    Then The rating for the book is 5
+    # But TestAdmin allows the 2 users to rate again
+    # And The 2 users try to rate a book 5
+    # Then The rating for the book is 5
 
   @javascript
   Scenario: Prevent a user from reviewing books.
