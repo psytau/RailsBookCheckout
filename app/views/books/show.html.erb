@@ -25,11 +25,13 @@
   <div id="star"></div>
 
   <script>
+    $(document).on('page:change', function () {
       $('#star').raty({
           readOnly: true,
           start: <%= @book.rating %>,
           path: '/assets'
-      });
+      })
+    });
   </script>
 
   <% if can? :create, Rating %>
@@ -38,6 +40,7 @@
   </p>
 
     <script>
+    $(document).on('page:change', function () {
       $('#user_star').raty({
           start: <%= @rating.score %>,
           path: '/assets',
@@ -48,7 +51,8 @@
                   data: { score: score }
               });
           }
-      });
+      })
+    });
     </script>
   <% end %>
 <p>
