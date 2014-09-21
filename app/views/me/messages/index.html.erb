@@ -1,0 +1,18 @@
+<div class="container">
+  <% if @messages.length > 0 %>
+    <h4>You have messages!</h4>
+  <% else %>
+    <h4>You have no messages.</h4>
+  <% end %>
+
+  <table class="table">
+  <% @messages.each do |m| %>
+    <tr> <td>
+        <%= m.originator.firstname || "Someone" %>
+        <%= verbify(m.kind)%> the book 
+        "<%= link_to m.book.title, book_path(m.book) %>" 
+        on <%= m.created_at %>
+    </td></tr>
+  <% end %>
+  </table>
+</div>

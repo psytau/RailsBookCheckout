@@ -31,11 +31,17 @@ feature "Follow" do
     click_button "Create Book review"
     expect(page).to have_text("a heartbreaking tale")
 
+    messages = Message.where('user_id = ?', @user.id)
+    m = messages.first
+    expect(m.user_id).to eq(@user.id)
+    expect(m.book_id).to eq(@book.id)
+    expect(m.kind).to eq(:book_review)
+
     login_as(@user, :scope => :user)
 
     # now your message path should have a message about user2
     # leaving a book review for @book
-    visit messages_path
+    visit '/me/messages'
     expect(page).to have_text(user2.firstname)
     expect(page).to have_text(@book.title)
   end

@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   namespace :me do
     resource :invite, only: [:new, :create]
+    resources :messages, only: [:index, :show]
   end
 
 

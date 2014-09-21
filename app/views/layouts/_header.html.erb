@@ -42,10 +42,19 @@
                 </li>
               <% end %>
 
-              <li>
-                <a href=<%= new_me_invite_path %>>Invite a friend!</a>
-              </li>
-
+              <% if user_signed_in? %>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Me<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li>
+                      <a href=<%= new_me_invite_path %>>Invite a friend!</a>
+                    </li>
+                    <li>
+                      <a href="/me/messages">Books you follow</a>
+                    </li>
+                  </ul>
+                </li>
+              <% end %>
               <% if @admin_user %>
                 <li>
                   <a href=/admin/view_as_self>Back to admin</a>

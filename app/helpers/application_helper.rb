@@ -3,4 +3,10 @@ module ApplicationHelper
     new_book_review_path({:book_id => @book.id})
   end
 
+  def verbify action
+    {
+      'book_review' => 'reviewed'
+    }[action]
+  end
+
 end
