@@ -25,7 +25,7 @@
   <div id="star"></div>
 
   <script>
-    $(document).on('page:change', function () {
+    $(document).on('ready', function () {
       $('#star').raty({
           readOnly: true,
           start: <%= @book.rating %>,
@@ -40,7 +40,7 @@
   </p>
 
     <script>
-    $(document).on('page:change', function () {
+    $(document).on('ready', function () {
       $('#user_star').raty({
           start: <%= @rating.score %>,
           path: '/assets',
