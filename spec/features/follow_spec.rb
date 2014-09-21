@@ -35,7 +35,7 @@ feature "Follow" do
     m = messages.first
     expect(m.user_id).to eq(@user.id)
     expect(m.book_id).to eq(@book.id)
-    expect(m.kind).to eq(:book_review)
+    expect(m.kind).to eq('book_review')
 
     login_as(@user, :scope => :user)
 
