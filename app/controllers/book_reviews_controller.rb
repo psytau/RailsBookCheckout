@@ -43,6 +43,7 @@ class BookReviewsController < ApplicationController
         format.json { render json: @book_review.errors, status: :unprocessable_entity }
       end
     end
+    Message.follower_message(:book_id => @book_review.book.id, :by => @book_review.user, :kind => :book_review, :kind_id => @book_review.id)
   end
 
   # We don't allow users to update reviews as of yet.

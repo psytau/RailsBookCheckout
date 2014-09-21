@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905070838) do
+ActiveRecord::Schema.define(version: 20140921103051) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -81,6 +81,19 @@ ActiveRecord::Schema.define(version: 20140905070838) do
     t.integer  "user_id"
     t.datetime "followed_date"
   end
+
+  create_table "messages", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.integer  "originator_id"
+    t.string   "kind"
+    t.integer  "kind_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["book_id"], name: "index_messages_on_book_id"
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
   create_table "ratings", force: true do |t|
     t.integer  "book_id"
