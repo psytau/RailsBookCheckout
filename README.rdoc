@@ -1,4 +1,5 @@
 == Rails Book Checkout
+Demo: http://railsbookcheckout.herokuapp.com
 
 To set up this app on heroku...
 
